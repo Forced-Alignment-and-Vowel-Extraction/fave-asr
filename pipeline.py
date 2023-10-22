@@ -166,20 +166,9 @@ if __name__ == "__main__":
             )
             end_time = time.time()
 
-            if device == "cpu":
-                memory_usage = psutil.Process().memory_info().rss / (1024 ** 3)
-            else:
-                memory_usage = get_gpu_memory_usage()
-
             results[model_name][device] = {
                 "execution_time": end_time - start_time,
-                "memory_usage": memory_usage,
             }
 
             print(f"Execution time for {model_name} on {device}: {results[model_name][device]['execution_time']:.2f} seconds")
-            print(f"Memory usage for {model_name} on {device}: {results[model_name][device]['memory_usage']:.2f}GB")
             print("\n")
-
-    plot_results(results)
-
-    results = {}
