@@ -1,0 +1,4 @@
+openai-whisper @ git+https://github.com/openai/whisper.git@b38a1f20f4b23f3f3099af2c3e0ca95627276ddf
+whisperx @ git+https://github.com/m-bain/whisperx.git@49e0130e4e0c0d99d60715d76e65a71826a97109
+GPUtil
+psutil
