@@ -3,7 +3,9 @@
 [![PRs Welcome](https://img.shields.io/badge/Pull_Requests-welcome-brightgreen.svg)](http://makeapullrequest.com)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 ![GitHub](https://img.shields.io/github/license/Forced-Alignment-and-Vowel-Extraction/fave-asr?color=blue)
-<!-- For the future: Travis CI build status and Coveralls for codecoverage -->
+
+![Build status](https://github.com/Forced-Alignment-and-Vowel-Extraction/fave-asr/actions/workflows/build.yml/badge.svg)
+<!-- For the future: Coveralls for codecoverage -->
 
 ## HuggingFace models used
 Artifical Intelegence models are powerful and in the wrong hands can be dangerous. 
