@@ -39,5 +39,8 @@ This module is in active development. The use documentation may be out of date. 
 7. Set `device = "cpu"` unless you can run on a GPU, then use `"cuda"`
 8. Run `results_segments_w_speakers = pipeline.transcribe_and_diarize(audio_file, hf_token, model_name, device)` 
 
+### Other software required
+* `ffmpeg`
+
 ## Authors
-Luís Roque contributed substantially to the main speaker diarization pipeline. Initial modifications to that code were made by Christian Brickhouse for stability and use as part of the fave-asr library.
+Luís Roque contributed substantially to the main speaker diarization pipeline. Initial modifications to that code were made by Christian Brickhouse for stability and use as part of the fave-asr library. For licensing of the test audio, see the README in that directory.
