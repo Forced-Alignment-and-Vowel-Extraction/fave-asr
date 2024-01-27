@@ -5,6 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/Forced-Alignment-and-Vowel-Extraction/fave-asr?color=blue)
 
 ![Build status](https://github.com/Forced-Alignment-and-Vowel-Extraction/fave-asr/actions/workflows/build.yml/badge.svg)
+[![codecov](https://codecov.io/gh/Forced-Alignment-and-Vowel-Extraction/fave-asr/graph/badge.svg?token=V54YXTIOPQ)](https://codecov.io/gh/Forced-Alignment-and-Vowel-Extraction/fave-asr)
 <!-- For the future: Coveralls for codecoverage -->
 
 ## HuggingFace models used
