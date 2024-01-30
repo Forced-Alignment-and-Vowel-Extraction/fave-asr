@@ -35,6 +35,40 @@ class TestPipeline():
             nptest.assert_array_equal(observed['speaker'],expected['speaker'])
             nptest.assert_array_equal(observed['label'],expected['label'])
 
+    def test_align_segments(self):
+        for case, tr_fname, ex_fname in self.provide_align_segments():
+            tr = None
+            with open(tr_fname,'r') as f:
+                tr = json.load(f)
+            observed = pipeline.align_segments(tr['segments'],tr['language_code'],*case)
+            expected = None
+            with open(ex_fname,'r') as f:
+                expected = json.load(f)
+            #o_transcript = " ".join([y['word'] for y in [x['words'] for x in observed['segments']]])
+            #e_transcript = " ".join([y['word'] for y in [x['words'] for x in expected['segments']]])
+            assert observed == expected
+
+    def _assign_funct_case_loader(self, data_provider, callback):
+        for diarization_fname, aligned_fname, expected_fname in data_provider():
+            dr = pandas.read_csv(diarization_fname,index_col=0)
+            with open(aligned_fname,'r') as aligned_file:
+                al = json.load(aligned_file)
+            with open(expected_fname,'r') as expected_file:
+                expected = json.load(expected_file)
+            observed = callback(dr,al)
+            assert observed['segments'] == expected['segments']
+            assert observed['word_segments'] == expected['word_segments']
+
+    def test_assign_word_speakers(self):
+        self._assign_funct_case_loader(
+                self.provide_assign_word_speakers, pipeline.assign_word_speakers
+            )
+
+    def test_assign_speakers(self):
+        self._assign_funct_case_loader(
+                self.provide_assign_speakers, pipeline.assign_speakers
+            )
+
     def provide_transcribe(self):
         return [
                 (
@@ -57,3 +91,27 @@ class TestPipeline():
                     './tests/data/TestAudio_SnoopDogg_85SouthMedia.csv'
                 ),
             ]
+
+    def provide_align_segments(self):
+        return [
+                (
+                    [
+                        './tests/data/TestAudio_SnoopDogg_85SouthMedia.wav',
+                        'cpu'
+                    ],
+                    './tests/data/TestAudio_SnoopDogg_85SouthMedia.json',
+                    './tests/data/TestAudio_SnoopDogg_85SouthMedia_aligned.json'
+                ),
+            ]
+
+    def provide_assign_speakers(self):
+        return [
+                (
+                    './tests/data/TestAudio_SnoopDogg_85SouthMedia.csv',
+                    './tests/data/TestAudio_SnoopDogg_85SouthMedia_aligned.json',
+                    './tests/data/TestAudio_SnoopDogg_85SouthMedia_segments.json'
+                ),
+            ]
+
+    def provide_assign_word_speakers(self):
+        return self.provide_assign_speakers()
