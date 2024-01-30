@@ -94,17 +94,21 @@ def assign_speakers(
     result_segments = assign_word_speakers(
         diarization_result, aligned_segments
     )
-    results_segments_w_speakers: List[Dict[str, Any]] = []
-    for result_segment in result_segments:
-        results_segments_w_speakers.append(
-            {
-                "start": result_segment["start"],
-                "end": result_segment["end"],
-                "text": result_segment["text"],
-                "speaker": result_segment["speaker"],
-            }
-        )
-    return results_segments_w_speakers
+    # Upstream uses this, but it's bugged and I think upstream's upstream has since adopted the
+    # output that it tries to create making it redundant
+    #
+    #results_segments_w_speakers: List[Dict[str, Any]] = []
+    #for result_segment in result_segments['segments']:
+    #    results_segments_w_speakers.append(
+    #        {
+    #            "start": result_segment["start"],
+    #            "end": result_segment["end"],
+    #            "text": result_segment["text"],
+    #            "speaker": result_segment["speaker"],
+    #            "words": result_segment["words"]
+    #        }
+    #    )
+    return result_segments
 
 def transcribe_and_diarize(
     audio_file: str,
@@ -133,7 +137,7 @@ def transcribe_and_diarize(
     results_segments_w_speakers = assign_speakers(diarization_result, aligned_segments)
 
     # Print the results in a user-friendly way
-    for i, segment in enumerate(results_segments_w_speakers):
+    for i, segment in enumerate(results_segments_w_speakers['segments']):
         print(f"Segment {i + 1}:")
         print(f"Start time: {segment['start']:.2f}")
         print(f"End time: {segment['end']:.2f}")
