@@ -1,0 +1,114 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.362
+xmax = 51.495
+tiers? <exists>
+size = 1
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "SPEAKER_00"
+		xmin = 0.362
+		xmax = 51.495
+		intervals: size = 25
+			intervals [1]:
+				xmin = 0.362
+				xmax = 3.238
+				text = " So, you know the pimpin', fuck y'all."
+			intervals [2]:
+				xmin = 4.024
+				xmax = 5.214
+				text = " I'm finna go over to Def Jam"
+			intervals [3]:
+				xmin = 6.286
+				xmax = 7.24
+				text = " and learn a little bit of corporate work,"
+			intervals [4]:
+				xmin = 7.382
+				xmax = 8.618
+				text = " because I don't know corporate yet."
+			intervals [5]:
+				xmin = 8.923
+				xmax = 9.96
+				text = " I only need a few months."
+			intervals [6]:
+				xmin = 10.0
+				xmax = 11.14
+				text = " You give me a few months to run the shit,"
+			intervals [7]:
+				xmin = 11.181
+				xmax = 12.437
+				text = " I'm a fast learner."
+			intervals [8]:
+				xmin = 13.084
+				xmax = 14.859
+				text = " Go to Def Jam, get a job in a position,"
+			intervals [9]:
+				xmin = 15.324
+				xmax = 16.72
+				text = " drop a record, get Benny the Butcher signed,"
+			intervals [10]:
+				xmin = 17.145
+				xmax = 18.277
+				text = " get Hip Hop Harry signed,"
+			intervals [11]:
+				xmin = 19.046
+				xmax = 20.08
+				text = " learn a few tricks of the trade,"
+			intervals [12]:
+				xmin = 20.524
+				xmax = 22.08
+				text = " find out that the niggas that had it"
+			intervals [13]:
+				xmin = 22.465
+				xmax = 23.539
+				text = " that wanted me to hold for them,"
+			intervals [14]:
+				xmin = 24.003
+				xmax = 25.336
+				text = " then sold it to some other people."
+			intervals [15]:
+				xmin = 26.243
+				xmax = 28.28
+				text = " So now, one of my big wig buddies called me"
+			intervals [16]:
+				xmin = 28.72
+				xmax = 31.336
+				text = " and said, hey dog, I know the people that got Def Ro."
+			intervals [17]:
+				xmin = 32.1
+				xmax = 33.714
+				text = " And they don't know what to do with it."
+			intervals [18]:
+				xmin = 34.46
+				xmax = 36.26
+				text = " Let me holler at them, I know just what to do with it."
+			intervals [19]:
+				xmin = 36.28
+				xmax = 39.116
+				text = " So I hit them and like, let me work for y'all."
+			intervals [20]:
+				xmin = 40.8
+				xmax = 43.32
+				text = " The play was cool, but it's like, yeah, fuck that."
+			intervals [21]:
+				xmin = 43.36
+				xmax = 44.818
+				text = " How much to buy this shit?"
+			intervals [22]:
+				xmin = 45.0
+				xmax = 46.24
+				text = " What you talkin' about?"
+			intervals [23]:
+				xmin = 46.24
+				xmax = 47.371
+				text = " How much to buy Def Ro first?"
+			intervals [24]:
+				xmin = 48.24
+				xmax = 49.25
+				text = " How much for my masters?"
+			intervals [25]:
+				xmin = 50.3
+				xmax = 51.495
+				text = " How much for all of the masters?"
