@@ -43,6 +43,7 @@ def align_segments(
     language_code: str,
     audio_file: str,
     device: str = "cpu",
+    model_name: str = "WAV2VEC2_ASR_LARGE_LV60K_960H"
 ) -> Dict[str, Any]:
     """
     Align the transcript segments using a pretrained alignment model (Wav2Vec2 by default).
@@ -52,11 +53,12 @@ def align_segments(
         language_code: Language code of the audio file.
         audio_file: Path to the audio file containing the audio data.
         device: The device to use for inference (e.g., "cpu" or "cuda").
+        model_name: Name of a model to pass to pytorch. See https://pytorch.org/audio/stable/pipelines.html
 
     Returns:
         A dictionary representing the aligned transcript segments.
     """
-    model_a, metadata = load_align_model(language_code=language_code, device=device)
+    model_a, metadata = load_align_model(model_name=model_name, language_code=language_code, device=device)
     result_aligned = align(segments, model_a, metadata, audio_file, device)
     return result_aligned
 
