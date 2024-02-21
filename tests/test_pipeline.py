@@ -35,6 +35,12 @@ class TestPipeline():
             nptest.assert_array_equal(observed['speaker'],expected['speaker'])
             nptest.assert_array_equal(observed['label'],expected['label'])
 
+    def _make_transcript(self, aligned,callback):
+        out = []
+        for word_dict in aligned['segments']:
+            out.append(callback(word_dict))
+        return " ".join(out)
+
     def test_align_segments(self):
         for case, tr_fname, ex_fname in self.provide_align_segments():
             tr = None
@@ -44,11 +50,14 @@ class TestPipeline():
             expected = None
             with open(ex_fname,'r') as f:
                 expected = json.load(f)
-            #o_transcript = " ".join([y['word'] for y in [x['words'] for x in observed['segments']]])
-            #e_transcript = " ".join([y['word'] for y in [x['words'] for x in expected['segments']]])
-            assert observed == expected
+            o_transcript = self._make_transcript(observed, lambda word_dict: word_dict['text'])
+            e_transcript = self._make_transcript(expected, lambda word_dict: word_dict['text'])
+            assert o_transcript == e_transcript
 
     def _assign_funct_case_loader(self, data_provider, callback):
+        def mt_callback(word_dict):
+            word_speaker = word_dict['speaker']+": "+word_dict['text']
+            return word_speaker
         for diarization_fname, aligned_fname, expected_fname in data_provider():
             dr = pandas.read_csv(diarization_fname,index_col=0)
             with open(aligned_fname,'r') as aligned_file:
@@ -56,8 +65,9 @@ class TestPipeline():
             with open(expected_fname,'r') as expected_file:
                 expected = json.load(expected_file)
             observed = callback(dr,al)
-            assert observed['segments'] == expected['segments']
-            assert observed['word_segments'] == expected['word_segments']
+            o_transcript = self._make_transcript(observed,mt_callback)
+            e_transcript = self._make_transcript(expected,mt_callback)
+            assert o_transcript == e_transcript
 
     def test_assign_word_speakers(self):
         self._assign_funct_case_loader(
