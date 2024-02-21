@@ -34,7 +34,7 @@ class Formatter():
         maxTime = diarized_transcription['segments'][-1]['end']
         tg = textgrid.TextGrid(minTime=minTime,maxTime=maxTime)
 
-        speakers = [x['speaker'] for x in diarized_transcription['segments']]
+        speakers = [x['speaker'] for x in diarized_transcription['segments'] if 'speaker' in x.keys()]
         for speaker in set(speakers):
             tg.append(textgrid.IntervalTier(name=speaker,minTime=minTime,maxTime=maxTime))
         # Create a lookup table of tier indices based on the given speaker name
@@ -42,6 +42,9 @@ class Formatter():
 
         for i in range(len(diarized_transcription['segments'])):
             segment = diarized_transcription['segments'][i]
+            if 'speaker' not in segment.keys():
+                print(segment)
+                continue
             # There's no guarantee, weirdly, that a given word's assigned speaker
             # is the same as the speaker assigned to the whole segment. Since
             # the tiers are based on assigned /segment/ speakers, not assigned 
