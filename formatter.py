@@ -40,8 +40,7 @@ class Formatter():
         # Create a lookup table of tier indices based on the given speaker name
         tier_key = dict((name,index) for index, name in enumerate([x.name for x in tg.tiers]))
 
-        for i in range(len(diarized_transcription['segments'])):
-            segment = diarized_transcription['segments'][i]
+        for segment in diarized_transcription['segments']:
             # There's no guarantee, weirdly, that a given word's assigned speaker
             # is the same as the speaker assigned to the whole segment. Since
             # the tiers are based on assigned /segment/ speakers, not assigned 
@@ -50,10 +49,7 @@ class Formatter():
             tier_index = tier_key[segment['speaker']]
             tier = tg.tiers[tier_index]
             minTime = segment['start']
-            if i+1 == len(diarized_transcription['segments']):
-                maxTime = segment['end']
-            else:
-                maxTime = diarized_transcription['segments'][i+1]['start']
+            maxTime = segment['end']
             mark = segment['text']
             tier.add(minTime,maxTime,mark)
             # In testing, the word-level alignments are not very good. A future version
