@@ -12,18 +12,21 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+import warnings
+
 import textgrid
 
 class Formatter():
     def __init__(self):
         pass
 
-    def to_TextGrid(self, diarized_transcription):
+    def to_TextGrid(self, diarized_transcription, by_phrase=True):
         """
         Convert a diarized transcription dictionary to a TextGrid
 
         Args:
             diarized_transcription: Output of pipeline.assign_speakers()
+            by_phrase: Flag for whether the intervals should be by phrase (True) or word (False)
 
         Returns:
             A textgrid.TextGrid object populated with the diarized and
@@ -34,29 +37,44 @@ class Formatter():
         maxTime = diarized_transcription['segments'][-1]['end']
         tg = textgrid.TextGrid(minTime=minTime,maxTime=maxTime)
 
-        speakers = [x['speaker'] for x in diarized_transcription['segments']]
+        speakers = [x['speaker'] for x in diarized_transcription['segments'] if 'speaker' in x]
         for speaker in set(speakers):
             tg.append(textgrid.IntervalTier(name=speaker,minTime=minTime,maxTime=maxTime))
         # Create a lookup table of tier indices based on the given speaker name
         tier_key = dict((name,index) for index, name in enumerate([x.name for x in tg.tiers]))
 
-        for segment in diarized_transcription['segments']:
+        for i in range(len(diarized_transcription['segments'])):
+            segment = diarized_transcription['segments'][i]
             # There's no guarantee, weirdly, that a given word's assigned speaker
             # is the same as the speaker assigned to the whole segment. Since
             # the tiers are based on assigned /segment/ speakers, not assigned 
             # word speakers, we need to look up the tier in the segment loop
             # not in the word loop. See Issue #7
+            if 'speaker' not in segment:
+                warnings.warn('No speaker for segment')
+                #print(segment)
+                continue
             tier_index = tier_key[segment['speaker']]
             tier = tg.tiers[tier_index]
             minTime = segment['start']
-            maxTime = segment['end']
+            if i+1 == len(diarized_transcription['segments']):
+                maxTime = segment['end']
+            else:
+                maxTime = diarized_transcription['segments'][i+1]['start']
             mark = segment['text']
-            tier.add(minTime,maxTime,mark)
-            # In testing, the word-level alignments are not very good. A future version
-            # might want to add an option for end users to enable the following loop.
-            #for word in segment['words']:
-            #    minTime = word['start']
-            #    maxTime = word['end']
-            #    mark = word['word']
-            #    tier.add(minTime,maxTime,mark)
+            if by_phrase:
+                tier.add(minTime,maxTime,mark)
+                continue
+            for word in segment['words']:
+                if 'speaker' not in word:
+                    warnings.warn('No speaker assigned to word, using phrase-level speaker')
+                elif word['speaker'] != segment['speaker']:
+                    warnings.warn('Mismatched speaker for word and phrase, using phrase-level speaker')
+                    #print(word['speaker'],word)
+                    #print(segment['speaker'],segment)
+                    #raise ValueError('Word and segment have different speakers')
+                minTime = word['start']
+                maxTime = word['end']
+                mark = word['text']
+                tier.add(minTime,maxTime,mark)
         return tg

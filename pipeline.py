@@ -12,11 +12,16 @@ import time
 import psutil
 import GPUtil
 import matplotlib.pyplot as plt
-import whisper
+import whisper_timestamped as whisper
 from whisperx import load_align_model, align
 from whisperx.diarize import DiarizationPipeline, assign_word_speakers
 
-def transcribe(audio_file: str, model_name: str, device: str = "cpu") -> Dict[str, Any]:
+def transcribe(
+        audio_file: str, 
+        model_name: str, 
+        device: str = "cpu",
+        detect_disfluencies: bool = True
+        ) -> Dict[str, Any]:
     """
     Transcribe an audio file using a whisper model.
 
@@ -24,14 +29,16 @@ def transcribe(audio_file: str, model_name: str, device: str = "cpu") -> Dict[st
         audio_file: Path to the audio file to transcribe.
         model_name: Name of the model to use for transcription.
         device: The device to use for inference (e.g., "cpu" or "cuda").
+        detect_disfluencies: Flag for whether the transcription should include disfluencies, marked with [*]
 
     Returns:
         A dictionary representing the transcript segments and language code.
     """
-    model = whisper.load_model(model_name, device)
-    result = model.transcribe(audio_file)
+    model = whisper.load_model(model_name, device=device)
+    audio = whisper.load_audio(audio_file)
+    result = whisper.transcribe(model, audio_file,detect_disfluencies=detect_disfluencies)
 
-    language_code = result["language"]
+    language_code = result['language']
     return {
         "segments": result["segments"],
         "language_code": language_code,
@@ -130,11 +137,11 @@ def transcribe_and_diarize(
         spoken text, and the speaker ID.
     """
     transcript = transcribe(audio_file, model_name, device)
-    aligned_segments = align_segments(
-        transcript["segments"], transcript["language_code"], audio_file, device
-    )
+    #aligned_segments = align_segments(
+    #    transcript["segments"], transcript["language_code"], audio_file, device
+    #)
     diarization_result = diarize(audio_file, hf_token)
-    results_segments_w_speakers = assign_speakers(diarization_result, aligned_segments)
+    results_segments_w_speakers = assign_speakers(diarization_result, transcript)
 
     # Print the results in a user-friendly way
     for i, segment in enumerate(results_segments_w_speakers['segments']):
