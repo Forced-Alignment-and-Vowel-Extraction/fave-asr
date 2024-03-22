@@ -3,7 +3,7 @@ import numpy.testing as nptest
 import os
 import pandas
 
-import pipeline
+import fave_asr as pipeline
 
 class TestPipeline():
     model_names = ["medium.en"]
