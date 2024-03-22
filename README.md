@@ -15,7 +15,7 @@ The models used by fave-asr are cost-free, but you need to accept additional ter
 To use these models:
 1. On HuggingFace, [create an account](https://huggingface.co/join) or [log in](https://huggingface.co/login)
 2. Accept the terms and conditions for [the segmentation model](https://hf.co/pyannote/segmentation)
-3. Accept the terms and conditions for [the diarization model](https://hf.co/pyannote/speaker-diarization)
+3. Accept the terms and conditions for [the diarization model](https://hf.co/pyannote/speaker-diarization-3.1)
 4. [Create an access token](https://hf.co/settings/tokens) or copy your existing token
 
 Keep track of your token and keep it safe (e.g. don't accidentally upload it to GitHub). 
