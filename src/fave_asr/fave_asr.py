@@ -101,7 +101,7 @@ def diarize(audio_file: str, hf_token: str) -> Dict[str, Any]:
     diarization_result = diarization_pipeline(audio_file)
     return diarization_result
 
-
+@warnings.deprecated("Redundant with assign_word_speakers")
 def assign_speakers(
     diarization_result: Dict[str, Any], aligned_segments: Dict[str, Any]
 ) -> List[Dict[str, Any]]:
@@ -119,20 +119,6 @@ def assign_speakers(
     result_segments = assign_word_speakers(
         diarization_result, aligned_segments
     )
-    # Upstream uses this, but it's bugged and I think upstream's upstream has since adopted the
-    # output that it tries to create making it redundant
-    #
-    # results_segments_w_speakers: List[Dict[str, Any]] = []
-    # for result_segment in result_segments['segments']:
-    #    results_segments_w_speakers.append(
-    #        {
-    #            "start": result_segment["start"],
-    #            "end": result_segment["end"],
-    #            "text": result_segment["text"],
-    #            "speaker": result_segment["speaker"],
-    #            "words": result_segment["words"]
-    #        }
-    #    )
     return result_segments
 
 
@@ -162,15 +148,6 @@ def transcribe_and_diarize(
     diarization_result = diarize(audio_file, hf_token)
     results_segments_w_speakers = assign_speakers(
         diarization_result, transcript)
-
-    # Print the results in a user-friendly way
-    for i, segment in enumerate(results_segments_w_speakers['segments']):
-        print(f"Segment {i + 1}:")
-        print(f"Start time: {segment['start']:.2f}")
-        print(f"End time: {segment['end']:.2f}")
-        print(f"Speaker: {segment['speaker']}")
-        print(f"Transcript: {segment['text']}")
-        print("")
 
     return results_segments_w_speakers
 
