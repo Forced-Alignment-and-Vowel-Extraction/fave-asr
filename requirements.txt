@@ -1,5 +1,0 @@
-whisperx
-whisper_timestamped
-GPUtil
-psutil
-textgrid
