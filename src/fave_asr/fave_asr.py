@@ -101,7 +101,6 @@ def diarize(audio_file: str, hf_token: str) -> Dict[str, Any]:
     diarization_result = diarization_pipeline(audio_file)
     return diarization_result
 
-@warnings.deprecated("Redundant with assign_word_speakers")
 def assign_speakers(
     diarization_result: Dict[str, Any], aligned_segments: Dict[str, Any]
 ) -> List[Dict[str, Any]]:
@@ -116,6 +115,8 @@ def assign_speakers(
         A list of dictionaries representing each segment of the transcript, including 
         the start and end times, the spoken text, and the speaker ID.
     """
+    # Considering deprecation
+    # warnings.warn("Redundant with assign_word_speakers", DeprecationWarning)
     result_segments = assign_word_speakers(
         diarization_result, aligned_segments
     )
