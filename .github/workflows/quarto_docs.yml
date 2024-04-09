@@ -14,7 +14,7 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: |
-          python -m pip install .
+          python -m pip install requirements-dev.txt
           quartodoc build --config doc_src/_quarto.yml
       - uses: quarto-dev/quarto-actions/setup@v2
       - name: Render and publish to gh pages
