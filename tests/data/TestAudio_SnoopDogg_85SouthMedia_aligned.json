@@ -1,0 +1,2509 @@
+{
+    "segments": [
+        {
+            "start": 0.362,
+            "end": 3.238,
+            "text": " So, you know the pimpin', fuck y'all.",
+            "words": [
+                {
+                    "word": "So,",
+                    "start": 0.362,
+                    "end": 0.644,
+                    "score": 0.844
+                },
+                {
+                    "word": "you",
+                    "start": 1.086,
+                    "end": 1.207,
+                    "score": 0.549
+                },
+                {
+                    "word": "know",
+                    "start": 1.227,
+                    "end": 1.368,
+                    "score": 0.673
+                },
+                {
+                    "word": "the",
+                    "start": 1.388,
+                    "end": 1.468,
+                    "score": 0.343
+                },
+                {
+                    "word": "pimpin',",
+                    "start": 1.488,
+                    "end": 1.85,
+                    "score": 0.518
+                },
+                {
+                    "word": "fuck",
+                    "start": 2.775,
+                    "end": 3.017,
+                    "score": 0.681
+                },
+                {
+                    "word": "y'all.",
+                    "start": 3.057,
+                    "end": 3.238,
+                    "score": 0.474
+                }
+            ]
+        },
+        {
+            "start": 4.024,
+            "end": 5.214,
+            "text": " I'm finna go over to Def Jam",
+            "words": [
+                {
+                    "word": "I'm",
+                    "start": 4.024,
+                    "end": 4.104,
+                    "score": 0.185
+                },
+                {
+                    "word": "finna",
+                    "start": 4.125,
+                    "end": 4.306,
+                    "score": 0.438
+                },
+                {
+                    "word": "go",
+                    "start": 4.346,
+                    "end": 4.427,
+                    "score": 0.881
+                },
+                {
+                    "word": "over",
+                    "start": 4.468,
+                    "end": 4.689,
+                    "score": 0.45
+                },
+                {
+                    "word": "to",
+                    "start": 4.71,
+                    "end": 4.75,
+                    "score": 0.003
+                },
+                {
+                    "word": "Def",
+                    "start": 4.77,
+                    "end": 4.972,
+                    "score": 0.792
+                },
+                {
+                    "word": "Jam",
+                    "start": 4.992,
+                    "end": 5.214,
+                    "score": 0.956
+                }
+            ]
+        },
+        {
+            "start": 6.286,
+            "end": 7.24,
+            "text": " and learn a little bit of corporate work,",
+            "words": [
+                {
+                    "word": "and",
+                    "start": 6.286,
+                    "end": 6.367,
+                    "score": 0.877
+                },
+                {
+                    "word": "learn",
+                    "start": 6.408,
+                    "end": 6.59,
+                    "score": 0.475
+                },
+                {
+                    "word": "a",
+                    "start": 6.611,
+                    "end": 6.631,
+                    "score": 0.616
+                },
+                {
+                    "word": "little",
+                    "start": 6.672,
+                    "end": 6.793,
+                    "score": 0.41
+                },
+                {
+                    "word": "bit",
+                    "start": 6.814,
+                    "end": 6.875,
+                    "score": 0.327
+                },
+                {
+                    "word": "of",
+                    "start": 6.895,
+                    "end": 6.935,
+                    "score": 0.0
+                },
+                {
+                    "word": "corporate",
+                    "start": 6.956,
+                    "end": 7.138,
+                    "score": 0.0
+                },
+                {
+                    "word": "work,",
+                    "start": 7.159,
+                    "end": 7.24,
+                    "score": 0.0
+                }
+            ]
+        },
+        {
+            "start": 7.382,
+            "end": 8.618,
+            "text": " because I don't know corporate yet.",
+            "words": [
+                {
+                    "word": "because",
+                    "start": 7.382,
+                    "end": 7.726,
+                    "score": 0.568
+                },
+                {
+                    "word": "I",
+                    "start": 7.767,
+                    "end": 7.787,
+                    "score": 0.96
+                },
+                {
+                    "word": "don't",
+                    "start": 7.808,
+                    "end": 7.929,
+                    "score": 0.101
+                },
+                {
+                    "word": "know",
+                    "start": 7.949,
+                    "end": 8.091,
+                    "score": 0.505
+                },
+                {
+                    "word": "corporate",
+                    "start": 8.132,
+                    "end": 8.476,
+                    "score": 0.672
+                },
+                {
+                    "word": "yet.",
+                    "start": 8.497,
+                    "end": 8.618,
+                    "score": 0.614
+                }
+            ]
+        },
+        {
+            "start": 8.923,
+            "end": 9.96,
+            "text": " I only need a few months.",
+            "words": [
+                {
+                    "word": "I",
+                    "start": 8.923,
+                    "end": 9.147,
+                    "score": 0.865
+                },
+                {
+                    "word": "only",
+                    "start": 9.167,
+                    "end": 9.33,
+                    "score": 0.513
+                },
+                {
+                    "word": "need",
+                    "start": 9.35,
+                    "end": 9.472,
+                    "score": 0.895
+                },
+                {
+                    "word": "a",
+                    "start": 9.492,
+                    "end": 9.512,
+                    "score": 0.989
+                },
+                {
+                    "word": "few",
+                    "start": 9.553,
+                    "end": 9.695,
+                    "score": 0.929
+                },
+                {
+                    "word": "months.",
+                    "start": 9.736,
+                    "end": 9.96,
+                    "score": 0.575
+                }
+            ]
+        },
+        {
+            "start": 10.0,
+            "end": 11.14,
+            "text": " You give me a few months to run the shit,",
+            "words": [
+                {
+                    "word": "You",
+                    "start": 10.0,
+                    "end": 10.061,
+                    "score": 0.0
+                },
+                {
+                    "word": "give",
+                    "start": 10.122,
+                    "end": 10.285,
+                    "score": 0.307
+                },
+                {
+                    "word": "me",
+                    "start": 10.346,
+                    "end": 10.428,
+                    "score": 0.31
+                },
+                {
+                    "word": "a",
+                    "start": 10.448,
+                    "end": 10.468,
+                    "score": 0.002
+                },
+                {
+                    "word": "few",
+                    "start": 10.489,
+                    "end": 10.55,
+                    "score": 0.002
+                },
+                {
+                    "word": "months",
+                    "start": 10.57,
+                    "end": 10.692,
+                    "score": 0.137
+                },
+                {
+                    "word": "to",
+                    "start": 10.733,
+                    "end": 10.855,
+                    "score": 0.297
+                },
+                {
+                    "word": "run",
+                    "start": 10.875,
+                    "end": 10.957,
+                    "score": 0.478
+                },
+                {
+                    "word": "the",
+                    "start": 10.977,
+                    "end": 11.038,
+                    "score": 0.098
+                },
+                {
+                    "word": "shit,",
+                    "start": 11.059,
+                    "end": 11.14,
+                    "score": 0.005
+                }
+            ]
+        },
+        {
+            "start": 11.181,
+            "end": 12.437,
+            "text": " I'm a fast learner.",
+            "words": [
+                {
+                    "word": "I'm",
+                    "start": 11.181,
+                    "end": 11.728,
+                    "score": 0.38
+                },
+                {
+                    "word": "a",
+                    "start": 11.869,
+                    "end": 11.93,
+                    "score": 0.629
+                },
+                {
+                    "word": "fast",
+                    "start": 11.951,
+                    "end": 12.214,
+                    "score": 0.792
+                },
+                {
+                    "word": "learner.",
+                    "start": 12.234,
+                    "end": 12.437,
+                    "score": 0.706
+                }
+            ]
+        },
+        {
+            "start": 13.084,
+            "end": 14.859,
+            "text": " Go to Def Jam, get a job in a position,",
+            "words": [
+                {
+                    "word": "Go",
+                    "start": 13.084,
+                    "end": 13.225,
+                    "score": 0.866
+                },
+                {
+                    "word": "to",
+                    "start": 13.245,
+                    "end": 13.306,
+                    "score": 0.192
+                },
+                {
+                    "word": "Def",
+                    "start": 13.346,
+                    "end": 13.548,
+                    "score": 0.805
+                },
+                {
+                    "word": "Jam,",
+                    "start": 13.568,
+                    "end": 13.81,
+                    "score": 0.716
+                },
+                {
+                    "word": "get",
+                    "start": 13.83,
+                    "end": 13.951,
+                    "score": 0.788
+                },
+                {
+                    "word": "a",
+                    "start": 13.972,
+                    "end": 14.012,
+                    "score": 0.57
+                },
+                {
+                    "word": "job",
+                    "start": 14.052,
+                    "end": 14.274,
+                    "score": 0.963
+                },
+                {
+                    "word": "in",
+                    "start": 14.315,
+                    "end": 14.375,
+                    "score": 0.798
+                },
+                {
+                    "word": "a",
+                    "start": 14.395,
+                    "end": 14.436,
+                    "score": 0.476
+                },
+                {
+                    "word": "position,",
+                    "start": 14.476,
+                    "end": 14.859,
+                    "score": 0.959
+                }
+            ]
+        },
+        {
+            "start": 15.324,
+            "end": 16.72,
+            "text": " drop a record, get Benny the Butcher signed,",
+            "words": [
+                {
+                    "word": "drop",
+                    "start": 15.324,
+                    "end": 15.567,
+                    "score": 0.91
+                },
+                {
+                    "word": "a",
+                    "start": 15.608,
+                    "end": 15.648,
+                    "score": 0.819
+                },
+                {
+                    "word": "record,",
+                    "start": 15.709,
+                    "end": 15.951,
+                    "score": 0.644
+                },
+                {
+                    "word": "get",
+                    "start": 15.992,
+                    "end": 16.133,
+                    "score": 0.599
+                },
+                {
+                    "word": "Benny",
+                    "start": 16.154,
+                    "end": 16.295,
+                    "score": 0.629
+                },
+                {
+                    "word": "the",
+                    "start": 16.316,
+                    "end": 16.376,
+                    "score": 0.032
+                },
+                {
+                    "word": "Butcher",
+                    "start": 16.396,
+                    "end": 16.558,
+                    "score": 0.072
+                },
+                {
+                    "word": "signed,",
+                    "start": 16.578,
+                    "end": 16.72,
+                    "score": 0.152
+                }
+            ]
+        },
+        {
+            "start": 17.145,
+            "end": 18.277,
+            "text": " get Hip Hop Harry signed,",
+            "words": [
+                {
+                    "word": "get",
+                    "start": 17.145,
+                    "end": 17.266,
+                    "score": 0.859
+                },
+                {
+                    "word": "Hip",
+                    "start": 17.306,
+                    "end": 17.387,
+                    "score": 0.902
+                },
+                {
+                    "word": "Hop",
+                    "start": 17.428,
+                    "end": 17.63,
+                    "score": 0.695
+                },
+                {
+                    "word": "Harry",
+                    "start": 17.65,
+                    "end": 17.933,
+                    "score": 0.733
+                },
+                {
+                    "word": "signed,",
+                    "start": 17.953,
+                    "end": 18.277,
+                    "score": 0.368
+                }
+            ]
+        },
+        {
+            "start": 19.046,
+            "end": 20.08,
+            "text": " learn a few tricks of the trade,",
+            "words": [
+                {
+                    "word": "learn",
+                    "start": 19.046,
+                    "end": 19.249,
+                    "score": 0.752
+                },
+                {
+                    "word": "a",
+                    "start": 19.269,
+                    "end": 19.31,
+                    "score": 0.447
+                },
+                {
+                    "word": "few",
+                    "start": 19.35,
+                    "end": 19.512,
+                    "score": 0.89
+                },
+                {
+                    "word": "tricks",
+                    "start": 19.553,
+                    "end": 19.796,
+                    "score": 0.862
+                },
+                {
+                    "word": "of",
+                    "start": 19.816,
+                    "end": 19.857,
+                    "score": 0.951
+                },
+                {
+                    "word": "the",
+                    "start": 19.877,
+                    "end": 19.958,
+                    "score": 0.459
+                },
+                {
+                    "word": "trade,",
+                    "start": 19.979,
+                    "end": 20.08,
+                    "score": 0.0
+                }
+            ]
+        },
+        {
+            "start": 20.524,
+            "end": 22.08,
+            "text": " find out that the niggas that had it",
+            "words": [
+                {
+                    "word": "find",
+                    "start": 20.524,
+                    "end": 20.787,
+                    "score": 0.896
+                },
+                {
+                    "word": "out",
+                    "start": 20.868,
+                    "end": 20.989,
+                    "score": 0.99
+                },
+                {
+                    "word": "that",
+                    "start": 21.474,
+                    "end": 21.595,
+                    "score": 0.706
+                },
+                {
+                    "word": "the",
+                    "start": 21.615,
+                    "end": 21.696,
+                    "score": 0.584
+                },
+                {
+                    "word": "niggas",
+                    "start": 21.716,
+                    "end": 21.838,
+                    "score": 0.003
+                },
+                {
+                    "word": "that",
+                    "start": 21.858,
+                    "end": 21.939,
+                    "score": 0.2
+                },
+                {
+                    "word": "had",
+                    "start": 21.959,
+                    "end": 22.019,
+                    "score": 0.001
+                },
+                {
+                    "word": "it",
+                    "start": 22.04,
+                    "end": 22.08,
+                    "score": 0.044
+                }
+            ]
+        },
+        {
+            "start": 22.465,
+            "end": 23.539,
+            "text": " that wanted me to hold for them,",
+            "words": [
+                {
+                    "word": "that",
+                    "start": 22.465,
+                    "end": 22.607,
+                    "score": 0.848
+                },
+                {
+                    "word": "wanted",
+                    "start": 22.627,
+                    "end": 22.809,
+                    "score": 0.858
+                },
+                {
+                    "word": "me",
+                    "start": 22.83,
+                    "end": 22.911,
+                    "score": 0.874
+                },
+                {
+                    "word": "to",
+                    "start": 22.951,
+                    "end": 23.012,
+                    "score": 0.742
+                },
+                {
+                    "word": "hold",
+                    "start": 23.073,
+                    "end": 23.235,
+                    "score": 0.624
+                },
+                {
+                    "word": "for",
+                    "start": 23.255,
+                    "end": 23.438,
+                    "score": 0.974
+                },
+                {
+                    "word": "them,",
+                    "start": 23.458,
+                    "end": 23.539,
+                    "score": 0.004
+                }
+            ]
+        },
+        {
+            "start": 24.003,
+            "end": 25.336,
+            "text": " then sold it to some other people.",
+            "words": [
+                {
+                    "word": "then",
+                    "start": 24.003,
+                    "end": 24.165,
+                    "score": 0.929
+                },
+                {
+                    "word": "sold",
+                    "start": 24.246,
+                    "end": 24.488,
+                    "score": 0.937
+                },
+                {
+                    "word": "it",
+                    "start": 24.528,
+                    "end": 24.589,
+                    "score": 0.62
+                },
+                {
+                    "word": "to",
+                    "start": 24.629,
+                    "end": 24.69,
+                    "score": 0.95
+                },
+                {
+                    "word": "some",
+                    "start": 24.73,
+                    "end": 24.892,
+                    "score": 0.671
+                },
+                {
+                    "word": "other",
+                    "start": 24.932,
+                    "end": 25.114,
+                    "score": 0.81
+                },
+                {
+                    "word": "people.",
+                    "start": 25.134,
+                    "end": 25.336,
+                    "score": 0.917
+                }
+            ]
+        },
+        {
+            "start": 26.243,
+            "end": 28.28,
+            "text": " So now, one of my big wig buddies called me",
+            "words": [
+                {
+                    "word": "So",
+                    "start": 26.243,
+                    "end": 26.425,
+                    "score": 0.899
+                },
+                {
+                    "word": "now,",
+                    "start": 26.485,
+                    "end": 26.747,
+                    "score": 0.871
+                },
+                {
+                    "word": "one",
+                    "start": 27.171,
+                    "end": 27.272,
+                    "score": 0.842
+                },
+                {
+                    "word": "of",
+                    "start": 27.292,
+                    "end": 27.332,
+                    "score": 0.879
+                },
+                {
+                    "word": "my",
+                    "start": 27.393,
+                    "end": 27.473,
+                    "score": 0.999
+                },
+                {
+                    "word": "big",
+                    "start": 27.493,
+                    "end": 27.554,
+                    "score": 0.0
+                },
+                {
+                    "word": "wig",
+                    "start": 27.574,
+                    "end": 27.776,
+                    "score": 0.889
+                },
+                {
+                    "word": "buddies",
+                    "start": 27.816,
+                    "end": 28.038,
+                    "score": 0.214
+                },
+                {
+                    "word": "called",
+                    "start": 28.058,
+                    "end": 28.199,
+                    "score": 0.138
+                },
+                {
+                    "word": "me",
+                    "start": 28.239,
+                    "end": 28.28,
+                    "score": 0.319
+                }
+            ]
+        },
+        {
+            "start": 28.72,
+            "end": 31.336,
+            "text": " and said, hey dog, I know the people that got Def Ro.",
+            "words": [
+                {
+                    "word": "and",
+                    "start": 28.72,
+                    "end": 28.8,
+                    "score": 0.151
+                },
+                {
+                    "word": "said,",
+                    "start": 28.841,
+                    "end": 29.002,
+                    "score": 0.482
+                },
+                {
+                    "word": "hey",
+                    "start": 29.042,
+                    "end": 29.143,
+                    "score": 0.232
+                },
+                {
+                    "word": "dog,",
+                    "start": 29.183,
+                    "end": 29.444,
+                    "score": 0.774
+                },
+                {
+                    "word": "I",
+                    "start": 29.988,
+                    "end": 30.048,
+                    "score": 0.79
+                },
+                {
+                    "word": "know",
+                    "start": 30.068,
+                    "end": 30.189,
+                    "score": 0.874
+                },
+                {
+                    "word": "the",
+                    "start": 30.229,
+                    "end": 30.289,
+                    "score": 0.418
+                },
+                {
+                    "word": "people",
+                    "start": 30.33,
+                    "end": 30.571,
+                    "score": 0.884
+                },
+                {
+                    "word": "that",
+                    "start": 30.591,
+                    "end": 30.732,
+                    "score": 0.466
+                },
+                {
+                    "word": "got",
+                    "start": 30.772,
+                    "end": 30.953,
+                    "score": 0.875
+                },
+                {
+                    "word": "Def",
+                    "start": 30.973,
+                    "end": 31.175,
+                    "score": 0.799
+                },
+                {
+                    "word": "Ro.",
+                    "start": 31.255,
+                    "end": 31.336,
+                    "score": 0.791
+                }
+            ]
+        },
+        {
+            "start": 32.1,
+            "end": 33.714,
+            "text": " And they don't know what to do with it.",
+            "words": [
+                {
+                    "word": "And",
+                    "start": 32.1,
+                    "end": 32.181,
+                    "score": 0.481
+                },
+                {
+                    "word": "they",
+                    "start": 32.201,
+                    "end": 32.282,
+                    "score": 0.803
+                },
+                {
+                    "word": "don't",
+                    "start": 32.302,
+                    "end": 32.423,
+                    "score": 0.096
+                },
+                {
+                    "word": "know",
+                    "start": 32.463,
+                    "end": 32.564,
+                    "score": 0.955
+                },
+                {
+                    "word": "what",
+                    "start": 32.605,
+                    "end": 32.746,
+                    "score": 0.747
+                },
+                {
+                    "word": "to",
+                    "start": 32.766,
+                    "end": 32.806,
+                    "score": 0.895
+                },
+                {
+                    "word": "do",
+                    "start": 32.867,
+                    "end": 33.008,
+                    "score": 0.993
+                },
+                {
+                    "word": "with",
+                    "start": 33.048,
+                    "end": 33.25,
+                    "score": 0.674
+                },
+                {
+                    "word": "it.",
+                    "start": 33.633,
+                    "end": 33.714,
+                    "score": 0.351
+                }
+            ]
+        },
+        {
+            "start": 34.46,
+            "end": 36.26,
+            "text": " Let me holler at them, I know just what to do with it.",
+            "words": [
+                {
+                    "word": "Let",
+                    "start": 34.46,
+                    "end": 34.582,
+                    "score": 0.788
+                },
+                {
+                    "word": "me",
+                    "start": 34.602,
+                    "end": 34.683,
+                    "score": 0.604
+                },
+                {
+                    "word": "holler",
+                    "start": 34.723,
+                    "end": 34.885,
+                    "score": 0.374
+                },
+                {
+                    "word": "at",
+                    "start": 34.966,
+                    "end": 35.027,
+                    "score": 0.484
+                },
+                {
+                    "word": "them,",
+                    "start": 35.047,
+                    "end": 35.188,
+                    "score": 0.3
+                },
+                {
+                    "word": "I",
+                    "start": 35.229,
+                    "end": 35.33,
+                    "score": 0.642
+                },
+                {
+                    "word": "know",
+                    "start": 35.35,
+                    "end": 35.492,
+                    "score": 0.929
+                },
+                {
+                    "word": "just",
+                    "start": 35.532,
+                    "end": 35.694,
+                    "score": 0.791
+                },
+                {
+                    "word": "what",
+                    "start": 35.734,
+                    "end": 35.856,
+                    "score": 0.885
+                },
+                {
+                    "word": "to",
+                    "start": 35.896,
+                    "end": 35.957,
+                    "score": 0.741
+                },
+                {
+                    "word": "do",
+                    "start": 35.997,
+                    "end": 36.098,
+                    "score": 0.994
+                },
+                {
+                    "word": "with",
+                    "start": 36.118,
+                    "end": 36.199,
+                    "score": 0.109
+                },
+                {
+                    "word": "it.",
+                    "start": 36.22,
+                    "end": 36.26,
+                    "score": 0.076
+                }
+            ]
+        },
+        {
+            "start": 36.28,
+            "end": 39.116,
+            "text": " So I hit them and like, let me work for y'all.",
+            "words": [
+                {
+                    "word": "So",
+                    "start": 36.28,
+                    "end": 36.381,
+                    "score": 0.878
+                },
+                {
+                    "word": "I",
+                    "start": 36.441,
+                    "end": 36.481,
+                    "score": 0.877
+                },
+                {
+                    "word": "hit",
+                    "start": 36.521,
+                    "end": 36.662,
+                    "score": 0.905
+                },
+                {
+                    "word": "them",
+                    "start": 36.682,
+                    "end": 36.843,
+                    "score": 0.469
+                },
+                {
+                    "word": "and",
+                    "start": 36.863,
+                    "end": 36.924,
+                    "score": 0.058
+                },
+                {
+                    "word": "like,",
+                    "start": 36.944,
+                    "end": 37.165,
+                    "score": 0.532
+                },
+                {
+                    "word": "let",
+                    "start": 37.567,
+                    "end": 37.708,
+                    "score": 0.887
+                },
+                {
+                    "word": "me",
+                    "start": 37.728,
+                    "end": 37.809,
+                    "score": 0.854
+                },
+                {
+                    "word": "work",
+                    "start": 37.829,
+                    "end": 38.211,
+                    "score": 0.608
+                },
+                {
+                    "word": "for",
+                    "start": 38.231,
+                    "end": 38.975,
+                    "score": 0.625
+                },
+                {
+                    "word": "y'all.",
+                    "start": 38.995,
+                    "end": 39.116,
+                    "score": 0.161
+                }
+            ]
+        },
+        {
+            "start": 40.8,
+            "end": 43.32,
+            "text": " The play was cool, but it's like, yeah, fuck that.",
+            "words": [
+                {
+                    "word": "The",
+                    "start": 40.8,
+                    "end": 40.86,
+                    "score": 0.0
+                },
+                {
+                    "word": "play",
+                    "start": 40.901,
+                    "end": 41.143,
+                    "score": 0.968
+                },
+                {
+                    "word": "was",
+                    "start": 41.183,
+                    "end": 41.284,
+                    "score": 0.756
+                },
+                {
+                    "word": "cool,",
+                    "start": 41.344,
+                    "end": 41.606,
+                    "score": 0.685
+                },
+                {
+                    "word": "but",
+                    "start": 41.647,
+                    "end": 41.727,
+                    "score": 0.985
+                },
+                {
+                    "word": "it's",
+                    "start": 41.747,
+                    "end": 41.909,
+                    "score": 0.336
+                },
+                {
+                    "word": "like,",
+                    "start": 41.969,
+                    "end": 42.231,
+                    "score": 0.642
+                },
+                {
+                    "word": "yeah,",
+                    "start": 42.292,
+                    "end": 42.715,
+                    "score": 0.582
+                },
+                {
+                    "word": "fuck",
+                    "start": 42.937,
+                    "end": 43.179,
+                    "score": 0.606
+                },
+                {
+                    "word": "that.",
+                    "start": 43.199,
+                    "end": 43.32,
+                    "score": 0.377
+                }
+            ]
+        },
+        {
+            "start": 43.36,
+            "end": 44.818,
+            "text": " How much to buy this shit?",
+            "words": [
+                {
+                    "word": "How",
+                    "start": 43.36,
+                    "end": 43.664,
+                    "score": 0.36
+                },
+                {
+                    "word": "much",
+                    "start": 43.988,
+                    "end": 44.15,
+                    "score": 0.736
+                },
+                {
+                    "word": "to",
+                    "start": 44.17,
+                    "end": 44.271,
+                    "score": 0.64
+                },
+                {
+                    "word": "buy",
+                    "start": 44.312,
+                    "end": 44.453,
+                    "score": 0.555
+                },
+                {
+                    "word": "this",
+                    "start": 44.494,
+                    "end": 44.656,
+                    "score": 0.596
+                },
+                {
+                    "word": "shit?",
+                    "start": 44.676,
+                    "end": 44.818,
+                    "score": 0.297
+                }
+            ]
+        },
+        {
+            "start": 45.0,
+            "end": 46.24,
+            "text": " What you talkin' about?",
+            "words": [
+                {
+                    "word": "What",
+                    "start": 45.0,
+                    "end": 45.081,
+                    "score": 0.0
+                },
+                {
+                    "word": "you",
+                    "start": 45.102,
+                    "end": 45.163,
+                    "score": 0.0
+                },
+                {
+                    "word": "talkin'",
+                    "start": 45.183,
+                    "end": 46.118,
+                    "score": 0.339
+                },
+                {
+                    "word": "about?",
+                    "start": 46.138,
+                    "end": 46.24,
+                    "score": 0.001
+                }
+            ]
+        },
+        {
+            "start": 46.24,
+            "end": 47.371,
+            "text": " How much to buy Def Ro first?",
+            "words": [
+                {
+                    "word": "How",
+                    "start": 46.24,
+                    "end": 46.301,
+                    "score": 0.0
+                },
+                {
+                    "word": "much",
+                    "start": 46.321,
+                    "end": 46.402,
+                    "score": 0.01
+                },
+                {
+                    "word": "to",
+                    "start": 46.422,
+                    "end": 46.462,
+                    "score": 0.0
+                },
+                {
+                    "word": "buy",
+                    "start": 46.482,
+                    "end": 46.664,
+                    "score": 0.699
+                },
+                {
+                    "word": "Def",
+                    "start": 46.705,
+                    "end": 46.927,
+                    "score": 0.938
+                },
+                {
+                    "word": "Ro",
+                    "start": 46.947,
+                    "end": 47.109,
+                    "score": 0.543
+                },
+                {
+                    "word": "first?",
+                    "start": 47.129,
+                    "end": 47.371,
+                    "score": 0.4
+                }
+            ]
+        },
+        {
+            "start": 48.24,
+            "end": 49.25,
+            "text": " How much for my masters?",
+            "words": [
+                {
+                    "word": "How",
+                    "start": 48.24,
+                    "end": 48.321,
+                    "score": 0.158
+                },
+                {
+                    "word": "much",
+                    "start": 48.341,
+                    "end": 48.482,
+                    "score": 0.36
+                },
+                {
+                    "word": "for",
+                    "start": 48.503,
+                    "end": 48.624,
+                    "score": 0.84
+                },
+                {
+                    "word": "my",
+                    "start": 48.644,
+                    "end": 48.805,
+                    "score": 0.896
+                },
+                {
+                    "word": "masters?",
+                    "start": 48.846,
+                    "end": 49.25,
+                    "score": 0.91
+                }
+            ]
+        },
+        {
+            "start": 50.3,
+            "end": 51.495,
+            "text": " How much for all of the masters?",
+            "words": [
+                {
+                    "word": "How",
+                    "start": 50.3,
+                    "end": 50.381,
+                    "score": 0.051
+                },
+                {
+                    "word": "much",
+                    "start": 50.401,
+                    "end": 50.543,
+                    "score": 0.354
+                },
+                {
+                    "word": "for",
+                    "start": 50.584,
+                    "end": 50.665,
+                    "score": 0.499
+                },
+                {
+                    "word": "all",
+                    "start": 50.705,
+                    "end": 50.847,
+                    "score": 0.973
+                },
+                {
+                    "word": "of",
+                    "start": 50.928,
+                    "end": 50.968,
+                    "score": 0.049
+                },
+                {
+                    "word": "the",
+                    "start": 50.989,
+                    "end": 51.07,
+                    "score": 0.363
+                },
+                {
+                    "word": "masters?",
+                    "start": 51.11,
+                    "end": 51.495,
+                    "score": 0.758
+                }
+            ]
+        }
+    ],
+    "word_segments": [
+        {
+            "word": "So,",
+            "start": 0.362,
+            "end": 0.644,
+            "score": 0.844
+        },
+        {
+            "word": "you",
+            "start": 1.086,
+            "end": 1.207,
+            "score": 0.549
+        },
+        {
+            "word": "know",
+            "start": 1.227,
+            "end": 1.368,
+            "score": 0.673
+        },
+        {
+            "word": "the",
+            "start": 1.388,
+            "end": 1.468,
+            "score": 0.343
+        },
+        {
+            "word": "pimpin',",
+            "start": 1.488,
+            "end": 1.85,
+            "score": 0.518
+        },
+        {
+            "word": "fuck",
+            "start": 2.775,
+            "end": 3.017,
+            "score": 0.681
+        },
+        {
+            "word": "y'all.",
+            "start": 3.057,
+            "end": 3.238,
+            "score": 0.474
+        },
+        {
+            "word": "I'm",
+            "start": 4.024,
+            "end": 4.104,
+            "score": 0.185
+        },
+        {
+            "word": "finna",
+            "start": 4.125,
+            "end": 4.306,
+            "score": 0.438
+        },
+        {
+            "word": "go",
+            "start": 4.346,
+            "end": 4.427,
+            "score": 0.881
+        },
+        {
+            "word": "over",
+            "start": 4.468,
+            "end": 4.689,
+            "score": 0.45
+        },
+        {
+            "word": "to",
+            "start": 4.71,
+            "end": 4.75,
+            "score": 0.003
+        },
+        {
+            "word": "Def",
+            "start": 4.77,
+            "end": 4.972,
+            "score": 0.792
+        },
+        {
+            "word": "Jam",
+            "start": 4.992,
+            "end": 5.214,
+            "score": 0.956
+        },
+        {
+            "word": "and",
+            "start": 6.286,
+            "end": 6.367,
+            "score": 0.877
+        },
+        {
+            "word": "learn",
+            "start": 6.408,
+            "end": 6.59,
+            "score": 0.475
+        },
+        {
+            "word": "a",
+            "start": 6.611,
+            "end": 6.631,
+            "score": 0.616
+        },
+        {
+            "word": "little",
+            "start": 6.672,
+            "end": 6.793,
+            "score": 0.41
+        },
+        {
+            "word": "bit",
+            "start": 6.814,
+            "end": 6.875,
+            "score": 0.327
+        },
+        {
+            "word": "of",
+            "start": 6.895,
+            "end": 6.935,
+            "score": 0.0
+        },
+        {
+            "word": "corporate",
+            "start": 6.956,
+            "end": 7.138,
+            "score": 0.0
+        },
+        {
+            "word": "work,",
+            "start": 7.159,
+            "end": 7.24,
+            "score": 0.0
+        },
+        {
+            "word": "because",
+            "start": 7.382,
+            "end": 7.726,
+            "score": 0.568
+        },
+        {
+            "word": "I",
+            "start": 7.767,
+            "end": 7.787,
+            "score": 0.96
+        },
+        {
+            "word": "don't",
+            "start": 7.808,
+            "end": 7.929,
+            "score": 0.101
+        },
+        {
+            "word": "know",
+            "start": 7.949,
+            "end": 8.091,
+            "score": 0.505
+        },
+        {
+            "word": "corporate",
+            "start": 8.132,
+            "end": 8.476,
+            "score": 0.672
+        },
+        {
+            "word": "yet.",
+            "start": 8.497,
+            "end": 8.618,
+            "score": 0.614
+        },
+        {
+            "word": "I",
+            "start": 8.923,
+            "end": 9.147,
+            "score": 0.865
+        },
+        {
+            "word": "only",
+            "start": 9.167,
+            "end": 9.33,
+            "score": 0.513
+        },
+        {
+            "word": "need",
+            "start": 9.35,
+            "end": 9.472,
+            "score": 0.895
+        },
+        {
+            "word": "a",
+            "start": 9.492,
+            "end": 9.512,
+            "score": 0.989
+        },
+        {
+            "word": "few",
+            "start": 9.553,
+            "end": 9.695,
+            "score": 0.929
+        },
+        {
+            "word": "months.",
+            "start": 9.736,
+            "end": 9.96,
+            "score": 0.575
+        },
+        {
+            "word": "You",
+            "start": 10.0,
+            "end": 10.061,
+            "score": 0.0
+        },
+        {
+            "word": "give",
+            "start": 10.122,
+            "end": 10.285,
+            "score": 0.307
+        },
+        {
+            "word": "me",
+            "start": 10.346,
+            "end": 10.428,
+            "score": 0.31
+        },
+        {
+            "word": "a",
+            "start": 10.448,
+            "end": 10.468,
+            "score": 0.002
+        },
+        {
+            "word": "few",
+            "start": 10.489,
+            "end": 10.55,
+            "score": 0.002
+        },
+        {
+            "word": "months",
+            "start": 10.57,
+            "end": 10.692,
+            "score": 0.137
+        },
+        {
+            "word": "to",
+            "start": 10.733,
+            "end": 10.855,
+            "score": 0.297
+        },
+        {
+            "word": "run",
+            "start": 10.875,
+            "end": 10.957,
+            "score": 0.478
+        },
+        {
+            "word": "the",
+            "start": 10.977,
+            "end": 11.038,
+            "score": 0.098
+        },
+        {
+            "word": "shit,",
+            "start": 11.059,
+            "end": 11.14,
+            "score": 0.005
+        },
+        {
+            "word": "I'm",
+            "start": 11.181,
+            "end": 11.728,
+            "score": 0.38
+        },
+        {
+            "word": "a",
+            "start": 11.869,
+            "end": 11.93,
+            "score": 0.629
+        },
+        {
+            "word": "fast",
+            "start": 11.951,
+            "end": 12.214,
+            "score": 0.792
+        },
+        {
+            "word": "learner.",
+            "start": 12.234,
+            "end": 12.437,
+            "score": 0.706
+        },
+        {
+            "word": "Go",
+            "start": 13.084,
+            "end": 13.225,
+            "score": 0.866
+        },
+        {
+            "word": "to",
+            "start": 13.245,
+            "end": 13.306,
+            "score": 0.192
+        },
+        {
+            "word": "Def",
+            "start": 13.346,
+            "end": 13.548,
+            "score": 0.805
+        },
+        {
+            "word": "Jam,",
+            "start": 13.568,
+            "end": 13.81,
+            "score": 0.716
+        },
+        {
+            "word": "get",
+            "start": 13.83,
+            "end": 13.951,
+            "score": 0.788
+        },
+        {
+            "word": "a",
+            "start": 13.972,
+            "end": 14.012,
+            "score": 0.57
+        },
+        {
+            "word": "job",
+            "start": 14.052,
+            "end": 14.274,
+            "score": 0.963
+        },
+        {
+            "word": "in",
+            "start": 14.315,
+            "end": 14.375,
+            "score": 0.798
+        },
+        {
+            "word": "a",
+            "start": 14.395,
+            "end": 14.436,
+            "score": 0.476
+        },
+        {
+            "word": "position,",
+            "start": 14.476,
+            "end": 14.859,
+            "score": 0.959
+        },
+        {
+            "word": "drop",
+            "start": 15.324,
+            "end": 15.567,
+            "score": 0.91
+        },
+        {
+            "word": "a",
+            "start": 15.608,
+            "end": 15.648,
+            "score": 0.819
+        },
+        {
+            "word": "record,",
+            "start": 15.709,
+            "end": 15.951,
+            "score": 0.644
+        },
+        {
+            "word": "get",
+            "start": 15.992,
+            "end": 16.133,
+            "score": 0.599
+        },
+        {
+            "word": "Benny",
+            "start": 16.154,
+            "end": 16.295,
+            "score": 0.629
+        },
+        {
+            "word": "the",
+            "start": 16.316,
+            "end": 16.376,
+            "score": 0.032
+        },
+        {
+            "word": "Butcher",
+            "start": 16.396,
+            "end": 16.558,
+            "score": 0.072
+        },
+        {
+            "word": "signed,",
+            "start": 16.578,
+            "end": 16.72,
+            "score": 0.152
+        },
+        {
+            "word": "get",
+            "start": 17.145,
+            "end": 17.266,
+            "score": 0.859
+        },
+        {
+            "word": "Hip",
+            "start": 17.306,
+            "end": 17.387,
+            "score": 0.902
+        },
+        {
+            "word": "Hop",
+            "start": 17.428,
+            "end": 17.63,
+            "score": 0.695
+        },
+        {
+            "word": "Harry",
+            "start": 17.65,
+            "end": 17.933,
+            "score": 0.733
+        },
+        {
+            "word": "signed,",
+            "start": 17.953,
+            "end": 18.277,
+            "score": 0.368
+        },
+        {
+            "word": "learn",
+            "start": 19.046,
+            "end": 19.249,
+            "score": 0.752
+        },
+        {
+            "word": "a",
+            "start": 19.269,
+            "end": 19.31,
+            "score": 0.447
+        },
+        {
+            "word": "few",
+            "start": 19.35,
+            "end": 19.512,
+            "score": 0.89
+        },
+        {
+            "word": "tricks",
+            "start": 19.553,
+            "end": 19.796,
+            "score": 0.862
+        },
+        {
+            "word": "of",
+            "start": 19.816,
+            "end": 19.857,
+            "score": 0.951
+        },
+        {
+            "word": "the",
+            "start": 19.877,
+            "end": 19.958,
+            "score": 0.459
+        },
+        {
+            "word": "trade,",
+            "start": 19.979,
+            "end": 20.08,
+            "score": 0.0
+        },
+        {
+            "word": "find",
+            "start": 20.524,
+            "end": 20.787,
+            "score": 0.896
+        },
+        {
+            "word": "out",
+            "start": 20.868,
+            "end": 20.989,
+            "score": 0.99
+        },
+        {
+            "word": "that",
+            "start": 21.474,
+            "end": 21.595,
+            "score": 0.706
+        },
+        {
+            "word": "the",
+            "start": 21.615,
+            "end": 21.696,
+            "score": 0.584
+        },
+        {
+            "word": "niggas",
+            "start": 21.716,
+            "end": 21.838,
+            "score": 0.003
+        },
+        {
+            "word": "that",
+            "start": 21.858,
+            "end": 21.939,
+            "score": 0.2
+        },
+        {
+            "word": "had",
+            "start": 21.959,
+            "end": 22.019,
+            "score": 0.001
+        },
+        {
+            "word": "it",
+            "start": 22.04,
+            "end": 22.08,
+            "score": 0.044
+        },
+        {
+            "word": "that",
+            "start": 22.465,
+            "end": 22.607,
+            "score": 0.848
+        },
+        {
+            "word": "wanted",
+            "start": 22.627,
+            "end": 22.809,
+            "score": 0.858
+        },
+        {
+            "word": "me",
+            "start": 22.83,
+            "end": 22.911,
+            "score": 0.874
+        },
+        {
+            "word": "to",
+            "start": 22.951,
+            "end": 23.012,
+            "score": 0.742
+        },
+        {
+            "word": "hold",
+            "start": 23.073,
+            "end": 23.235,
+            "score": 0.624
+        },
+        {
+            "word": "for",
+            "start": 23.255,
+            "end": 23.438,
+            "score": 0.974
+        },
+        {
+            "word": "them,",
+            "start": 23.458,
+            "end": 23.539,
+            "score": 0.004
+        },
+        {
+            "word": "then",
+            "start": 24.003,
+            "end": 24.165,
+            "score": 0.929
+        },
+        {
+            "word": "sold",
+            "start": 24.246,
+            "end": 24.488,
+            "score": 0.937
+        },
+        {
+            "word": "it",
+            "start": 24.528,
+            "end": 24.589,
+            "score": 0.62
+        },
+        {
+            "word": "to",
+            "start": 24.629,
+            "end": 24.69,
+            "score": 0.95
+        },
+        {
+            "word": "some",
+            "start": 24.73,
+            "end": 24.892,
+            "score": 0.671
+        },
+        {
+            "word": "other",
+            "start": 24.932,
+            "end": 25.114,
+            "score": 0.81
+        },
+        {
+            "word": "people.",
+            "start": 25.134,
+            "end": 25.336,
+            "score": 0.917
+        },
+        {
+            "word": "So",
+            "start": 26.243,
+            "end": 26.425,
+            "score": 0.899
+        },
+        {
+            "word": "now,",
+            "start": 26.485,
+            "end": 26.747,
+            "score": 0.871
+        },
+        {
+            "word": "one",
+            "start": 27.171,
+            "end": 27.272,
+            "score": 0.842
+        },
+        {
+            "word": "of",
+            "start": 27.292,
+            "end": 27.332,
+            "score": 0.879
+        },
+        {
+            "word": "my",
+            "start": 27.393,
+            "end": 27.473,
+            "score": 0.999
+        },
+        {
+            "word": "big",
+            "start": 27.493,
+            "end": 27.554,
+            "score": 0.0
+        },
+        {
+            "word": "wig",
+            "start": 27.574,
+            "end": 27.776,
+            "score": 0.889
+        },
+        {
+            "word": "buddies",
+            "start": 27.816,
+            "end": 28.038,
+            "score": 0.214
+        },
+        {
+            "word": "called",
+            "start": 28.058,
+            "end": 28.199,
+            "score": 0.138
+        },
+        {
+            "word": "me",
+            "start": 28.239,
+            "end": 28.28,
+            "score": 0.319
+        },
+        {
+            "word": "and",
+            "start": 28.72,
+            "end": 28.8,
+            "score": 0.151
+        },
+        {
+            "word": "said,",
+            "start": 28.841,
+            "end": 29.002,
+            "score": 0.482
+        },
+        {
+            "word": "hey",
+            "start": 29.042,
+            "end": 29.143,
+            "score": 0.232
+        },
+        {
+            "word": "dog,",
+            "start": 29.183,
+            "end": 29.444,
+            "score": 0.774
+        },
+        {
+            "word": "I",
+            "start": 29.988,
+            "end": 30.048,
+            "score": 0.79
+        },
+        {
+            "word": "know",
+            "start": 30.068,
+            "end": 30.189,
+            "score": 0.874
+        },
+        {
+            "word": "the",
+            "start": 30.229,
+            "end": 30.289,
+            "score": 0.418
+        },
+        {
+            "word": "people",
+            "start": 30.33,
+            "end": 30.571,
+            "score": 0.884
+        },
+        {
+            "word": "that",
+            "start": 30.591,
+            "end": 30.732,
+            "score": 0.466
+        },
+        {
+            "word": "got",
+            "start": 30.772,
+            "end": 30.953,
+            "score": 0.875
+        },
+        {
+            "word": "Def",
+            "start": 30.973,
+            "end": 31.175,
+            "score": 0.799
+        },
+        {
+            "word": "Ro.",
+            "start": 31.255,
+            "end": 31.336,
+            "score": 0.791
+        },
+        {
+            "word": "And",
+            "start": 32.1,
+            "end": 32.181,
+            "score": 0.481
+        },
+        {
+            "word": "they",
+            "start": 32.201,
+            "end": 32.282,
+            "score": 0.803
+        },
+        {
+            "word": "don't",
+            "start": 32.302,
+            "end": 32.423,
+            "score": 0.096
+        },
+        {
+            "word": "know",
+            "start": 32.463,
+            "end": 32.564,
+            "score": 0.955
+        },
+        {
+            "word": "what",
+            "start": 32.605,
+            "end": 32.746,
+            "score": 0.747
+        },
+        {
+            "word": "to",
+            "start": 32.766,
+            "end": 32.806,
+            "score": 0.895
+        },
+        {
+            "word": "do",
+            "start": 32.867,
+            "end": 33.008,
+            "score": 0.993
+        },
+        {
+            "word": "with",
+            "start": 33.048,
+            "end": 33.25,
+            "score": 0.674
+        },
+        {
+            "word": "it.",
+            "start": 33.633,
+            "end": 33.714,
+            "score": 0.351
+        },
+        {
+            "word": "Let",
+            "start": 34.46,
+            "end": 34.582,
+            "score": 0.788
+        },
+        {
+            "word": "me",
+            "start": 34.602,
+            "end": 34.683,
+            "score": 0.604
+        },
+        {
+            "word": "holler",
+            "start": 34.723,
+            "end": 34.885,
+            "score": 0.374
+        },
+        {
+            "word": "at",
+            "start": 34.966,
+            "end": 35.027,
+            "score": 0.484
+        },
+        {
+            "word": "them,",
+            "start": 35.047,
+            "end": 35.188,
+            "score": 0.3
+        },
+        {
+            "word": "I",
+            "start": 35.229,
+            "end": 35.33,
+            "score": 0.642
+        },
+        {
+            "word": "know",
+            "start": 35.35,
+            "end": 35.492,
+            "score": 0.929
+        },
+        {
+            "word": "just",
+            "start": 35.532,
+            "end": 35.694,
+            "score": 0.791
+        },
+        {
+            "word": "what",
+            "start": 35.734,
+            "end": 35.856,
+            "score": 0.885
+        },
+        {
+            "word": "to",
+            "start": 35.896,
+            "end": 35.957,
+            "score": 0.741
+        },
+        {
+            "word": "do",
+            "start": 35.997,
+            "end": 36.098,
+            "score": 0.994
+        },
+        {
+            "word": "with",
+            "start": 36.118,
+            "end": 36.199,
+            "score": 0.109
+        },
+        {
+            "word": "it.",
+            "start": 36.22,
+            "end": 36.26,
+            "score": 0.076
+        },
+        {
+            "word": "So",
+            "start": 36.28,
+            "end": 36.381,
+            "score": 0.878
+        },
+        {
+            "word": "I",
+            "start": 36.441,
+            "end": 36.481,
+            "score": 0.877
+        },
+        {
+            "word": "hit",
+            "start": 36.521,
+            "end": 36.662,
+            "score": 0.905
+        },
+        {
+            "word": "them",
+            "start": 36.682,
+            "end": 36.843,
+            "score": 0.469
+        },
+        {
+            "word": "and",
+            "start": 36.863,
+            "end": 36.924,
+            "score": 0.058
+        },
+        {
+            "word": "like,",
+            "start": 36.944,
+            "end": 37.165,
+            "score": 0.532
+        },
+        {
+            "word": "let",
+            "start": 37.567,
+            "end": 37.708,
+            "score": 0.887
+        },
+        {
+            "word": "me",
+            "start": 37.728,
+            "end": 37.809,
+            "score": 0.854
+        },
+        {
+            "word": "work",
+            "start": 37.829,
+            "end": 38.211,
+            "score": 0.608
+        },
+        {
+            "word": "for",
+            "start": 38.231,
+            "end": 38.975,
+            "score": 0.625
+        },
+        {
+            "word": "y'all.",
+            "start": 38.995,
+            "end": 39.116,
+            "score": 0.161
+        },
+        {
+            "word": "The",
+            "start": 40.8,
+            "end": 40.86,
+            "score": 0.0
+        },
+        {
+            "word": "play",
+            "start": 40.901,
+            "end": 41.143,
+            "score": 0.968
+        },
+        {
+            "word": "was",
+            "start": 41.183,
+            "end": 41.284,
+            "score": 0.756
+        },
+        {
+            "word": "cool,",
+            "start": 41.344,
+            "end": 41.606,
+            "score": 0.685
+        },
+        {
+            "word": "but",
+            "start": 41.647,
+            "end": 41.727,
+            "score": 0.985
+        },
+        {
+            "word": "it's",
+            "start": 41.747,
+            "end": 41.909,
+            "score": 0.336
+        },
+        {
+            "word": "like,",
+            "start": 41.969,
+            "end": 42.231,
+            "score": 0.642
+        },
+        {
+            "word": "yeah,",
+            "start": 42.292,
+            "end": 42.715,
+            "score": 0.582
+        },
+        {
+            "word": "fuck",
+            "start": 42.937,
+            "end": 43.179,
+            "score": 0.606
+        },
+        {
+            "word": "that.",
+            "start": 43.199,
+            "end": 43.32,
+            "score": 0.377
+        },
+        {
+            "word": "How",
+            "start": 43.36,
+            "end": 43.664,
+            "score": 0.36
+        },
+        {
+            "word": "much",
+            "start": 43.988,
+            "end": 44.15,
+            "score": 0.736
+        },
+        {
+            "word": "to",
+            "start": 44.17,
+            "end": 44.271,
+            "score": 0.64
+        },
+        {
+            "word": "buy",
+            "start": 44.312,
+            "end": 44.453,
+            "score": 0.555
+        },
+        {
+            "word": "this",
+            "start": 44.494,
+            "end": 44.656,
+            "score": 0.596
+        },
+        {
+            "word": "shit?",
+            "start": 44.676,
+            "end": 44.818,
+            "score": 0.297
+        },
+        {
+            "word": "What",
+            "start": 45.0,
+            "end": 45.081,
+            "score": 0.0
+        },
+        {
+            "word": "you",
+            "start": 45.102,
+            "end": 45.163,
+            "score": 0.0
+        },
+        {
+            "word": "talkin'",
+            "start": 45.183,
+            "end": 46.118,
+            "score": 0.339
+        },
+        {
+            "word": "about?",
+            "start": 46.138,
+            "end": 46.24,
+            "score": 0.001
+        },
+        {
+            "word": "How",
+            "start": 46.24,
+            "end": 46.301,
+            "score": 0.0
+        },
+        {
+            "word": "much",
+            "start": 46.321,
+            "end": 46.402,
+            "score": 0.01
+        },
+        {
+            "word": "to",
+            "start": 46.422,
+            "end": 46.462,
+            "score": 0.0
+        },
+        {
+            "word": "buy",
+            "start": 46.482,
+            "end": 46.664,
+            "score": 0.699
+        },
+        {
+            "word": "Def",
+            "start": 46.705,
+            "end": 46.927,
+            "score": 0.938
+        },
+        {
+            "word": "Ro",
+            "start": 46.947,
+            "end": 47.109,
+            "score": 0.543
+        },
+        {
+            "word": "first?",
+            "start": 47.129,
+            "end": 47.371,
+            "score": 0.4
+        },
+        {
+            "word": "How",
+            "start": 48.24,
+            "end": 48.321,
+            "score": 0.158
+        },
+        {
+            "word": "much",
+            "start": 48.341,
+            "end": 48.482,
+            "score": 0.36
+        },
+        {
+            "word": "for",
+            "start": 48.503,
+            "end": 48.624,
+            "score": 0.84
+        },
+        {
+            "word": "my",
+            "start": 48.644,
+            "end": 48.805,
+            "score": 0.896
+        },
+        {
+            "word": "masters?",
+            "start": 48.846,
+            "end": 49.25,
+            "score": 0.91
+        },
+        {
+            "word": "How",
+            "start": 50.3,
+            "end": 50.381,
+            "score": 0.051
+        },
+        {
+            "word": "much",
+            "start": 50.401,
+            "end": 50.543,
+            "score": 0.354
+        },
+        {
+            "word": "for",
+            "start": 50.584,
+            "end": 50.665,
+            "score": 0.499
+        },
+        {
+            "word": "all",
+            "start": 50.705,
+            "end": 50.847,
+            "score": 0.973
+        },
+        {
+            "word": "of",
+            "start": 50.928,
+            "end": 50.968,
+            "score": 0.049
+        },
+        {
+            "word": "the",
+            "start": 50.989,
+            "end": 51.07,
+            "score": 0.363
+        },
+        {
+            "word": "masters?",
+            "start": 51.11,
+            "end": 51.495,
+            "score": 0.758
+        }
+    ]
+}
