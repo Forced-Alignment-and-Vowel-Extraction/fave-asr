@@ -1,0 +1,7 @@
+# Function reference {.doc .doc-index}
+
+## FAVE ASR functions
+
+| | |
+| --- | --- |
+| [fave_asr](fave_asr.qmd#fave_asr.fave_asr) | This module automates the transcription and diarization of linguistic data. |

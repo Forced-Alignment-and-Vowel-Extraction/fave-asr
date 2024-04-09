@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: _site
+
+license: GPLv3
+
+website:
+  favicon: assets/FAVE-logo.png
+  image: assets/FAVE-logo.png
+  page-navigation: true
+  navbar:
+    logo: assets/FAVE-logo.png
+    left:
+      - file: index.qmd
+        text: Get Started
+      - href: usage/
+        text: Examples
+      - href: reference/
+        text: Reference        
+    right:
+      - icon: github
+        href: https://github.com/Forced-Alignment-and-Vowel-Extraction/fave-asr/      
+  sidebar:
+      - id: get-started
+        title: Get Started
+        style: floating
+        align: left
+        contents:
+          - section: Getting Started
+            contents:
+              - index.qmd
+              - usage/index.qmd
+
+format:
+  html: 
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+interlinks:
+  sources:
+    python:
+      url: https://docs.python.org/3/
+
+quartodoc:
+  # the name used to import the package you want to create reference docs for
+  package: fave_asr
+  style: pkgdown
+  dir: reference
+  # write sidebar data to this file
+  sidebar: "reference/_sidebar.yml"
+  parser: google
+  #render_interlinks: true
+  sections:
+    - title: FAVE ASR functions
+      #desc: |
+      #  These functions comprise the main pipeline.
+      contents:
+        - package: fave_asr
+          name: fave_asr
