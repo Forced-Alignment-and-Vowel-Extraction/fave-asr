@@ -7,6 +7,7 @@ license = "GPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "fave_asr", from="src"}]
 repository = "https://github.com/Forced-Alignment-and-Vowel-Extraction/fave-asr"
+homepage = "https://forced-alignment-and-vowel-extraction.github.io/fave-asr/"
 
 [tool.poetry.dependencies]
 python = "^3.10"
