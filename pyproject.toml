@@ -2,7 +2,11 @@
 name = "fave-asr"
 version = "0.1.0"
 description = "Automated transcription and diarization of linguistic data"
-authors = ["Christian Brickhouse <brickhouse@stanford.edu>"]
+authors = [
+	"Christian Brickhouse <brickhouse@stanford.edu>",
+	"Luís Roque <>"
+]
+maintainers = ["Christian Brickhouse <brickhouse@stanford.edu>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "fave_asr", from="src"}]
