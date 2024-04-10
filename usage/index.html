@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <code>fave-asr</code> pipeline automates a few different steps that can be broken down depending on your needs. For example, if you just need a transcript but don’t care about <em>who</em> said the words, you can just do the transcribe step and none of the others.</p>
 <section id="raw-transcription" class="level3">
 <h3 class="anchored" data-anchor-id="raw-transcription">Raw transcription</h3>
-<div id="dd7e67a3" class="cell" data-execution_count="1">
+<div id="211b018a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> fave_asr</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>transcription <span class="op">=</span> fave_asr.transcribe(</span>
@@ -251,14 +251,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The output in <code>transcription</code> is a dictionary with the keys <code>segments</code> and <code>language_code</code>. <code>segments</code> is a List of Dicts, with each Dict having data on the speech in that segment.</p>
-<div id="0ac64c56" class="cell" data-execution_count="2">
+<div id="f5af2576" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>transcription[<span class="st">'segments'</span>][<span class="dv">0</span>].keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>dict_keys(['id', 'seek', 'start', 'end', 'text', 'tokens', 'temperature', 'avg_logprob', 'compression_ratio', 'no_speech_prob', 'confidence', 'words'])</code></pre>
 </div>
 </div>
 <p>If you wanted a text transcript of the entire file, you can iterate through <code>segments</code> and get the <code>text</code> field for each one.</p>
-<div id="c178f2c5" class="cell" data-execution_count="3">
+<div id="ea5dd58a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>text_list <span class="op">=</span> []</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> segment <span class="kw">in</span> transcription[<span class="st">'segments'</span>]:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    text_list.append(segment[<span class="st">'text'</span>])</span>
@@ -282,14 +282,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="diarization" class="level3">
 <h3 class="anchored" data-anchor-id="diarization">Diarization</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Gated model access
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Diarization requires <a href="https://huggingface.co/settings/tokens">a HuggingFace Access Token</a> and that you agree to the terms of some gated models. See the documentation page on <a href="../usage/gated_models.html">setting and using access tokens</a></p>
+</div>
+</div>
 <p>Some audio files have more than one speaker, and a raw transcript may not be useful if we don’t know who said what. The process of assigning speech to a speaker in an audio file is <em>diarization</em>. <code>fave-asr</code> uses machine learning models which are <em>gated</em>, meaning that the creators might require you to agree to particular terms before using it. You can learn more and agree to the terms at the <a href="https://huggingface.co/pyannote/speaker-diarization-3.1">page for the diarization model</a>.</p>
-<p>Diarization works best if you have <a href="https://huggingface.co/settings/tokens">a HuggingFace Access Token</a> which makes it easy to download the most up-to-date models. You can also leave it blank, like in the example here, but the results are not guaranteed.</p>
-<div id="50e86024" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>diarization <span class="op">=</span> fave_asr.diarize(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    audio_file <span class="op">=</span> <span class="st">'resources/SnoopDogg_85SouthMedia.wav'</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    hf_token<span class="op">=</span><span class="st">''</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(diarization)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6a47d8e1" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>diarization <span class="op">=</span> fave_asr.diarize(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    audio_file <span class="op">=</span> <span class="st">'resources/SnoopDogg_85SouthMedia.wav'</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    hf_token<span class="op">=</span>os.environ[<span class="st">"HF_TOKEN"</span>]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(diarization)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                              segment label     speaker      start        end
 0   [ 00:00:00.365 --&gt;  00:00:00.704]     A  SPEAKER_00   0.365025   0.704584
@@ -315,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 20  [ 00:00:34.219 --&gt;  00:00:35.288]     U  SPEAKER_03  34.219015  35.288625
 21  [ 00:00:34.286 --&gt;  00:00:37.224]     V  SPEAKER_00  34.286927  37.224109
 22  [ 00:00:37.427 --&gt;  00:00:38.276]     W  SPEAKER_00  37.427844  38.276740
-23  [ 00:00:38.853 --&gt;  00:00:39.770]     X  SPEAKER_00  38.853990  39.770798
+23  [ 00:00:38.853 --&gt;  00:00:39.753]     X  SPEAKER_00  38.853990  39.753820
 24  [ 00:00:40.840 --&gt;  00:00:42.707]     Y  SPEAKER_00  40.840407  42.707980
 25  [ 00:00:42.843 --&gt;  00:00:45.152]     Z  SPEAKER_00  42.843803  45.152801
 26  [ 00:00:46.052 --&gt;  00:00:47.461]    AA  SPEAKER_00  46.052632  47.461800
@@ -325,18 +338,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The diarization output is a Pandas DataFrame with various columns. Most important are <code>speaker</code>, <code>start</code>, and <code>end</code> which give a speaker label for that segment, the start time of the segment, and the end time of the segment.</p>
 <p>For example, you can get a list of unique speaker labels using python’s <code>set</code> function.</p>
-<div id="da2f125d" class="cell" data-execution_count="5">
+<div id="1dae4f4d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>speakers <span class="op">=</span> <span class="bu">set</span>(diarization[<span class="st">'speaker'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And you can use the <code>len</code> function to get the number of speakers</p>
-<div id="3bac7417" class="cell" data-execution_count="6">
+<div id="4c1d89bc" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(speakers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>4</code></pre>
 </div>
 </div>
 <p>You can also filter the transcript by selecting only segments with a particular speaker using Pandas’ <code>DataFrame.loc</code> method.</p>
-<div id="aaf370f7" class="cell" data-execution_count="7">
+<div id="c7c8804b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>snoop_dogg <span class="op">=</span> diarization.loc[diarization[<span class="st">'speaker'</span>] <span class="op">==</span> <span class="st">'SPEAKER_00'</span>]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(snoop_dogg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -358,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 18  [ 00:00:32.164 --&gt;  00:00:33.098]     S  SPEAKER_00  32.164686  33.098472
 21  [ 00:00:34.286 --&gt;  00:00:37.224]     V  SPEAKER_00  34.286927  37.224109
 22  [ 00:00:37.427 --&gt;  00:00:38.276]     W  SPEAKER_00  37.427844  38.276740
-23  [ 00:00:38.853 --&gt;  00:00:39.770]     X  SPEAKER_00  38.853990  39.770798
+23  [ 00:00:38.853 --&gt;  00:00:39.753]     X  SPEAKER_00  38.853990  39.753820
 24  [ 00:00:40.840 --&gt;  00:00:42.707]     Y  SPEAKER_00  40.840407  42.707980
 25  [ 00:00:42.843 --&gt;  00:00:45.152]     Z  SPEAKER_00  42.843803  45.152801
 26  [ 00:00:46.052 --&gt;  00:00:47.461]    AA  SPEAKER_00  46.052632  47.461800
@@ -370,11 +383,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="diarized-transcription" class="level3">
 <h3 class="anchored" data-anchor-id="diarized-transcription">Diarized transcription</h3>
 <p>The last stage of the pipeline is combining the diarization and the transcription by assigning speakers to segments.</p>
-<div id="78c716ef" class="cell" data-execution_count="8">
+<div id="9db111c5" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>diarized_transcript <span class="op">=</span> fave_asr.assign_speakers(diarization,transcription)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The structure of <code>diarized_transcript</code> is very similar to the structure of <code>transcription</code> but the segments and words now have a <code>speaker</code> field.</p>
-<div id="be1dc200" class="cell" data-execution_count="9">
+<div id="1a99c033" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>diarized_transcript[<span class="st">'segments'</span>][<span class="dv">0</span>][<span class="st">'speaker'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>'SPEAKER_00'</code></pre>
@@ -387,11 +400,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="textgrid" class="level3">
 <h3 class="anchored" data-anchor-id="textgrid">TextGrid</h3>
 <p>A <a href="#Diarization">diarized transcript</a> can be converted to a <a href="https://github.com/kylebgorman/textgrid/tree/master">textgrid</a> object and navigated using that library.</p>
-<div id="2d233a45" class="cell" data-execution_count="10">
+<div id="54bee66e" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tg <span class="op">=</span> fave_asr.to_TextGrid(diarized_transcript)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can write the output to a file using the <code>textgrid.write</code> method by specifying a file name for the output TextGrid.</p>
-<div id="ae06e4a5" class="cell" data-execution_count="11">
+<div id="79cf3c95" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tg.write(<span class="st">'SnoopDogg_Interview.TextGrid'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
@@ -623,6 +636,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/Forced-Alignment-and-Vowel-Extraction\.github\.io\/fave-asr\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -657,7 +688,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -933,7 +968,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link  aria-label=" fave="" automated="" speech="" recognition"="">
+      <a href="../index.html" class="pagination-link" aria-label="FAVE Automated Speech Recognition">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FAVE Automated Speech Recognition</span>
       </a>          
   </div>

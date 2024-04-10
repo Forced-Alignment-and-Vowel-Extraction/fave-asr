@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>Gated models and access tokens</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../reference/fave_asr.html" rel="next">
 <link href="../assets/FAVE-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,59 +116,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/index.html">Function reference</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Function reference</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">FAVE ASR functions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference/fave_asr.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">fave_asr</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#function-reference" id="toc-function-reference" class="nav-link active" data-scroll-target="#function-reference">Function reference</a>
+  <li><a href="#using-gated-models" id="toc-using-gated-models" class="nav-link active" data-scroll-target="#using-gated-models">Using gated models</a></li>
+  <li><a href="#creating-an-environment-variable-for-your-token" id="toc-creating-an-environment-variable-for-your-token" class="nav-link" data-scroll-target="#creating-an-environment-variable-for-your-token">Creating an environment variable for your token</a>
   <ul class="collapse">
-  <li><a href="#fave-asr-functions" id="toc-fave-asr-functions" class="nav-link" data-scroll-target="#fave-asr-functions">FAVE ASR functions</a></li>
+  <li><a href="#linux-and-mac" id="toc-linux-and-mac" class="nav-link" data-scroll-target="#linux-and-mac">Linux and Mac</a></li>
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -177,21 +138,73 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gated models and access tokens</h1>
+</div>
 
 
 
-<section id="function-reference" class="level1 doc doc-index">
-<h1 class="doc doc-index">Function reference</h1>
-<section id="fave-asr-functions" class="level2">
-<h2 class="anchored" data-anchor-id="fave-asr-functions">FAVE ASR functions</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td><a href="../reference/fave_asr.html#fave_asr.fave_asr">fave_asr</a></td>
-<td>This module automates the transcription and diarization of linguistic data.</td>
-</tr>
-</tbody>
-</table>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="using-gated-models" class="level2">
+<h2 class="anchored" data-anchor-id="using-gated-models">Using gated models</h2>
+<p>Artifical Intelegence models are powerful and in the wrong hands can be dangerous. The models used by fave-asr are cost-free, but you need to accept additional terms of use.</p>
+<p>To use these models: 1. On HuggingFace, <a href="https://huggingface.co/join">create an account</a> or <a href="https://huggingface.co/login">log in</a> 2. Accept the terms and conditions for <a href="https://hf.co/pyannote/segmentation">the segmentation model</a> 3. Accept the terms and conditions for <a href="https://hf.co/pyannote/speaker-diarization-3.1">the diarization model</a> 4. <a href="https://hf.co/settings/tokens">Create an access token</a> or copy your existing token</p>
+<p>Keep track of your token and keep it safe (e.g.&nbsp;don’t accidentally upload it to GitHub). We suggest creating an environment variable for your token so that you don’t need to paste it into your files.</p>
+</section>
+<section id="creating-an-environment-variable-for-your-token" class="level2">
+<h2 class="anchored" data-anchor-id="creating-an-environment-variable-for-your-token">Creating an environment variable for your token</h2>
+<p>Storing your tokens as environment variables is a good way to avoid accidentally leaking them. Instead of typing the token into your code and deleting it before you commit, you can use <code>os.environ["HF_TOKEN"]</code> to access it from Python.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using environment variables makes your code more readable and easier to maintain. Random strings are hard to debug, and you might forget what the token is for. Using environment variables gives these tokens name like <code>HF_TOKEN</code> which is makes it easier to tell what token is being used and if it’s the right one.</p>
+</div>
+</div>
+<section id="linux-and-mac" class="level3">
+<h3 class="anchored" data-anchor-id="linux-and-mac">Linux and Mac</h3>
+<p>On Linux and Mac you can store your token in <code>.bashrc</code></p>
+<ol type="1">
+<li>Open <code>$HOME/.bashrc</code> in a text editor</li>
+<li>At the end of that file, add the following <code>HF_TOKEN='&lt;your token&gt;' ; export HF_TOKEN</code> replacing <code>&lt;your token&gt;</code> with <a href="https://hf.co/settings/tokens">your HuggingFace token</a></li>
+<li>Add the changes to your current session using <code>source $HOME/.bashrc</code></li>
+</ol>
+</section>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>On Windows, use the <code>setx</code> command to create an environment variable.</p>
+<pre><code>setx HF_TOKEN &lt;your token&gt;</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You need to restart the command line afterwards to make the environment variable available for use. If you try to use the variable in the same window you set the variable, you will run into problems.</p>
+</div>
+</div>
 
 
 </section>
@@ -751,15 +764,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../reference/fave_asr.html" class="pagination-link" aria-label="fave_asr">
-        <span class="nav-page-text">fave_asr</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
