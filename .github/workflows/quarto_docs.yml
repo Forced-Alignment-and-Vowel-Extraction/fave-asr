@@ -21,6 +21,8 @@ jobs:
           quartodoc build --config doc_src/_quarto.yml
       - uses: quarto-dev/quarto-actions/setup@v2
       - name: Render and publish to gh pages
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
