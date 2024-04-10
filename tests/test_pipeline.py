@@ -3,7 +3,7 @@ import numpy.testing as nptest
 import os
 import pandas
 
-import pipeline
+import fave_asr as pipeline
 
 class TestPipeline():
     model_names = ["medium.en"]
@@ -69,10 +69,11 @@ class TestPipeline():
             e_transcript = self._make_transcript(expected,mt_callback)
             assert o_transcript == e_transcript
 
-    def test_assign_word_speakers(self):
-        self._assign_funct_case_loader(
-                self.provide_assign_word_speakers, pipeline.assign_word_speakers
-            )
+    # We don't expose this function from whisperx
+    #def test_assign_word_speakers(self):
+    #    self._assign_funct_case_loader(
+    #            self.provide_assign_word_speakers, pipeline.assign_word_speakers
+    #        )
 
     def test_assign_speakers(self):
         self._assign_funct_case_loader(

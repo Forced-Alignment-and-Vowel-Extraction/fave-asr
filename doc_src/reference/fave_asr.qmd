@@ -1,0 +1,140 @@
+# fave_asr { #fave_asr.fave_asr }
+
+`fave_asr`
+
+This module automates the transcription and diarization of linguistic data.
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [align_segments](#fave_asr.fave_asr.align_segments) | Align the transcript segments using a pretrained alignment model (Wav2Vec2 by default). |
+| [assign_speakers](#fave_asr.fave_asr.assign_speakers) | Assign speakers to each transcript segment based on the speaker diarization result. |
+| [diarize](#fave_asr.fave_asr.diarize) | Perform speaker diarization on an audio file. |
+| [to_TextGrid](#fave_asr.fave_asr.to_TextGrid) | Convert a diarized transcription dictionary to a TextGrid |
+| [transcribe](#fave_asr.fave_asr.transcribe) | Transcribe an audio file using a whisper model. |
+| [transcribe_and_diarize](#fave_asr.fave_asr.transcribe_and_diarize) | Transcribe an audio file and perform speaker diarization. |
+
+### align_segments { #fave_asr.fave_asr.align_segments }
+
+`fave_asr.align_segments(segments, language_code, audio_file, device='cpu')`
+
+Align the transcript segments using a pretrained alignment model (Wav2Vec2 by default).
+
+#### Parameters
+
+| Name            | Type                                          | Description                                              | Default    |
+|-----------------|-----------------------------------------------|----------------------------------------------------------|------------|
+| `segments`      | typing.List\[typing.Dict\[str, typing.Any\]\] | List of transcript segments to align.                    | _required_ |
+| `language_code` | str                                           | Language code of the audio file.                         | _required_ |
+| `audio_file`    | str                                           | Path to the audio file containing the audio data.        | _required_ |
+| `device`        | str                                           | The device to use for inference (e.g., "cpu" or "cuda"). | `'cpu'`    |
+
+#### Returns
+
+| Type                           | Description                                                |
+|--------------------------------|------------------------------------------------------------|
+| typing.Dict\[str, typing.Any\] | A dictionary representing the aligned transcript segments. |
+
+### assign_speakers { #fave_asr.fave_asr.assign_speakers }
+
+`fave_asr.assign_speakers(diarization_result, aligned_segments)`
+
+Assign speakers to each transcript segment based on the speaker diarization result.
+
+#### Parameters
+
+| Name                 | Type                           | Description                                                                             | Default    |
+|----------------------|--------------------------------|-----------------------------------------------------------------------------------------|------------|
+| `diarization_result` | typing.Dict\[str, typing.Any\] | Dictionary of diarized audio file, including speaker embeddings and number of speakers. | _required_ |
+| `aligned_segments`   | typing.Dict\[str, typing.Any\] | Dictionary representing the aligned transcript segments.                                | _required_ |
+
+#### Returns
+
+| Type                                          | Description                                                                   |
+|-----------------------------------------------|-------------------------------------------------------------------------------|
+| typing.List\[typing.Dict\[str, typing.Any\]\] | A list of dictionaries representing each segment of the transcript, including |
+| typing.List\[typing.Dict\[str, typing.Any\]\] | the start and end times, the spoken text, and the speaker ID.                 |
+
+### diarize { #fave_asr.fave_asr.diarize }
+
+`fave_asr.diarize(audio_file, hf_token)`
+
+Perform speaker diarization on an audio file.
+
+#### Parameters
+
+| Name         | Type   | Description                                              | Default    |
+|--------------|--------|----------------------------------------------------------|------------|
+| `audio_file` | str    | Path to the audio file to diarize.                       | _required_ |
+| `hf_token`   | str    | Authentication token for accessing the Hugging Face API. | _required_ |
+
+#### Returns
+
+| Type                           | Description                                                                                                     |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| typing.Dict\[str, typing.Any\] | A dictionary representing the diarized audio file, including the speaker embeddings and the number of speakers. |
+
+### to_TextGrid { #fave_asr.fave_asr.to_TextGrid }
+
+`fave_asr.to_TextGrid(diarized_transcription, by_phrase=True)`
+
+Convert a diarized transcription dictionary to a TextGrid
+
+#### Parameters
+
+| Name                     | Type   | Description                                                               | Default    |
+|--------------------------|--------|---------------------------------------------------------------------------|------------|
+| `diarized_transcription` |        | Output of pipeline.assign_speakers()                                      | _required_ |
+| `by_phrase`              |        | Flag for whether the intervals should be by phrase (True) or word (False) | `True`     |
+
+#### Returns
+
+| Type   | Description                                                   |
+|--------|---------------------------------------------------------------|
+|        | A textgrid.TextGrid object populated with the diarized and    |
+|        | transcribed data. Tiers are by speaker and contain word-level |
+|        | intervals not utterance-level.                                |
+
+### transcribe { #fave_asr.fave_asr.transcribe }
+
+`fave_asr.transcribe(audio_file, model_name, device='cpu', detect_disfluencies=True)`
+
+Transcribe an audio file using a whisper model.
+
+#### Parameters
+
+| Name                  | Type   | Description                                                                     | Default    |
+|-----------------------|--------|---------------------------------------------------------------------------------|------------|
+| `audio_file`          | str    | Path to the audio file to transcribe.                                           | _required_ |
+| `model_name`          | str    | Name of the model to use for transcription.                                     | _required_ |
+| `device`              | str    | The device to use for inference (e.g., "cpu" or "cuda").                        | `'cpu'`    |
+| `detect_disfluencies` | bool   | Flag for whether the transcription should include disfluencies, marked with [*] | `True`     |
+
+#### Returns
+
+| Type                           | Description                                                          |
+|--------------------------------|----------------------------------------------------------------------|
+| typing.Dict\[str, typing.Any\] | A dictionary representing the transcript segments and language code. |
+
+### transcribe_and_diarize { #fave_asr.fave_asr.transcribe_and_diarize }
+
+`fave_asr.transcribe_and_diarize(audio_file, hf_token, model_name, device='cpu')`
+
+Transcribe an audio file and perform speaker diarization.
+
+#### Parameters
+
+| Name         | Type   | Description                                              | Default    |
+|--------------|--------|----------------------------------------------------------|------------|
+| `audio_file` | str    | Path to the audio file to transcribe and diarize.        | _required_ |
+| `hf_token`   | str    | Authentication token for accessing the Hugging Face API. | _required_ |
+| `model_name` | str    | Name of the model to use for transcription.              | _required_ |
+| `device`     | str    | The device to use for inference (e.g., "cpu" or "cuda"). | `'cpu'`    |
+
+#### Returns
+
+| Type                                          | Description                                                                   |
+|-----------------------------------------------|-------------------------------------------------------------------------------|
+| typing.List\[typing.Dict\[str, typing.Any\]\] | A list of dictionaries representing each segment of the transcript, including |
+| typing.List\[typing.Dict\[str, typing.Any\]\] | the start and end times, the spoken text, and the speaker ID.                 |

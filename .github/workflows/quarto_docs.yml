@@ -1,0 +1,27 @@
+name: Build Docs
+
+on:
+  push:
+    branches: ["main", "dev", "release-prep"]
+
+jobs:
+  build-docs:
+     runs-on: ubuntu-latest
+     steps:
+      - uses: actions/checkout@v2
+      - name: Setup FFmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install . jupyter
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Render and publish to gh pages
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          path: doc_src

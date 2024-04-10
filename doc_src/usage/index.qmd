@@ -1,0 +1,94 @@
+---
+title: Usage examples
+---
+
+## Pipeline walkthrough
+
+The `fave-asr` pipeline automates a few different steps that can be broken down depending on your needs. For example, if you just need a transcript but don't care about *who* said the words, you can just do the transcribe step and none of the others.
+
+### Raw transcription
+```{python}
+#| output: false
+import fave_asr
+
+transcription = fave_asr.transcribe(
+    audio_file = 'resources/SnoopDogg_85SouthMedia.wav',
+    model_name = 'small.en',
+    device = 'cpu'
+    )
+```
+
+The output in `transcription` is a dictionary with the keys `segments` and `language_code`. `segments` is a List of Dicts, with each Dict having data on the speech in that segment.
+
+```{python}
+transcription['segments'][0].keys()
+```
+
+If you wanted a text transcript of the entire file, you can iterate through `segments` and get the `text` field for each one.
+
+```{python}
+text_list = []
+for segment in transcription['segments']:
+    text_list.append(segment['text'])
+print("\n".join(text_list))
+```
+
+Each segment also has word-level data available in the `words` field including `start` and `end` times for each word.
+
+### Diarization
+::: {.callout-tip}
+# Gated model access
+Diarization requires [a HuggingFace Access Token](https://huggingface.co/settings/tokens) and that you agree to the terms of some gated models. See the documentation page on [setting and using access tokens](gated_models.qmd)
+:::
+Some audio files have more than one speaker, and a raw transcript may not be useful if we don't know who said what. The process of assigning speech to a speaker in an audio file is *diarization*. `fave-asr` uses machine learning models which are *gated*, meaning that the creators might require you to agree to particular terms before using it. You can learn more and agree to the terms at the [page for the diarization model](https://huggingface.co/pyannote/speaker-diarization-3.1).
+
+```{python}
+import os
+diarization = fave_asr.diarize(
+    audio_file = 'resources/SnoopDogg_85SouthMedia.wav',
+    hf_token=os.environ["HF_TOKEN"]
+    )
+print(diarization)
+```
+
+The diarization output is a Pandas DataFrame with various columns. Most important are `speaker`, `start`, and `end` which give a speaker label for that segment, the start time of the segment, and the end time of the segment.
+
+For example, you can get a list of unique speaker labels using python's `set` function.
+```{python}
+speakers = set(diarization['speaker'])
+```
+
+And you can use the `len` function to get the number of speakers
+```{python}
+len(speakers)
+```
+
+You can also filter the transcript by selecting only segments with a particular speaker using Pandas' `DataFrame.loc` method.
+```{python}
+snoop_dogg = diarization.loc[diarization['speaker'] == 'SPEAKER_00']
+print(snoop_dogg)
+```
+
+### Diarized transcription
+The last stage of the pipeline is combining the diarization and the transcription by assigning speakers to segments. 
+```{python}
+diarized_transcript = fave_asr.assign_speakers(diarization,transcription)
+```
+
+The structure of `diarized_transcript` is very similar to the structure of `transcription` but the segments and words now have a `speaker` field.
+```{python}
+diarized_transcript['segments'][0]['speaker']
+```
+
+## Output
+### TextGrid
+A [diarized transcript](#Diarization) can be converted to a [textgrid](https://github.com/kylebgorman/textgrid/tree/master) object and navigated using that library.
+```{python}
+tg = fave_asr.to_TextGrid(diarized_transcript)
+```
+
+You can write the output to a file using the `textgrid.write` method by specifying a file name for the output TextGrid.
+```{python}
+#| eval: false
+tg.write('SnoopDogg_Interview.TextGrid')
+```

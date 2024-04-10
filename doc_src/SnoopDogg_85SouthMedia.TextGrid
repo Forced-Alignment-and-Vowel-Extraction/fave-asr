@@ -1,0 +1,62 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 51.44
+tiers? <exists>
+size = 1
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "SPEAKER_00"
+		xmin = 0.0
+		xmax = 51.44
+		intervals: size = 12
+			intervals [1]:
+				xmin = 0.0
+				xmax = 6.24
+				text = " So you know the pimpin fuck y'all I'm gonna go over to dev jam"
+			intervals [2]:
+				xmin = 6.24
+				xmax = 8.78
+				text = " And learn a little bit of corporate work cuz I don't know corporate shit"
+			intervals [3]:
+				xmin = 8.78
+				xmax = 11.46
+				text = " I only need a few months right give me a few months around the shit"
+			intervals [4]:
+				xmin = 11.46
+				xmax = 18.94
+				text = " I'm a fast learner go to dev jam get a job in a position drop a record get Benny the butcher song get hip-hop Harry's on"
+			intervals [5]:
+				xmin = 18.94
+				xmax = 23.94
+				text = " Learn a few tricks of the trade find out that the niggas that had it that wanted me to hold for them"
+			intervals [6]:
+				xmin = 23.94
+				xmax = 26.12
+				text = " Then sold it to some other people"
+			intervals [7]:
+				xmin = 26.12
+				xmax = 29.9
+				text = " So now one of my big wig buddies called me and say hey dog"
+			intervals [8]:
+				xmin = 29.9
+				xmax = 34.38
+				text = " I know the people that got there from and they don't know what to do with it. Mmm"
+			intervals [9]:
+				xmin = 34.38
+				xmax = 40.72
+				text = " Let me hide them. I know just what to do with it. So I hit them like let me um, we work for y'all"
+			intervals [10]:
+				xmin = 40.72
+				xmax = 45.96
+				text = " The play was cool, but it's like yeah fuck that how much how much to buy this shit?"
+			intervals [11]:
+				xmin = 45.96
+				xmax = 50.22
+				text = " How much to buy death row first how much for my masters?"
+			intervals [12]:
+				xmin = 50.22
+				xmax = 51.44
+				text = " How much for all of the masters?"
