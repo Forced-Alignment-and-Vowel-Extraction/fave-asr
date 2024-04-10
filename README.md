@@ -45,7 +45,6 @@ Unlike other services, `fave-asr` does not require uploading your data to other 
 As an example, we'll transcribe an audio interview of Snoop Dogg by the 85 South Media podcast and output it as a TextGrid.
 
 ```{python}
-#| output: false
 import fave_asr
 
 data = fave_asr.transcribe_and_diarize(
@@ -57,17 +56,7 @@ data = fave_asr.transcribe_and_diarize(
 tg = fave_asr.to_TextGrid(data)
 tg.write('SnoopDogg_85SouthMedia.TextGrid')
 ```
-```{python}
-#| echo: false
-import io
-buffer = io.StringIO()
-# textgrid.write() closes the buffer, preventing us from reading it, so trick it
-# into calling nothing
-close = buffer.close
-buffer.close = lambda: None
-tg.write(buffer)
-print(buffer.getvalue())
-```
+
 ## Using gated models
 Artifical Intelegence models are powerful and in the wrong hands can be dangerous. The models used by fave-asr are cost-free, but you need to accept additional terms of use.
 
