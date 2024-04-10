@@ -41,11 +41,12 @@ As an example, we'll transcribe an audio interview of Snoop Dogg by the 85 South
 
 ```{python}
 #| output: false
+import os
 import fave_asr
 
 data = fave_asr.transcribe_and_diarize(
     audio_file = 'usage/resources/SnoopDogg_85SouthMedia.wav',
-    hf_token = '',
+    hf_token = os.environ["HF_TOKEN"],
     model_name = 'small.en',
     device = 'cpu'
     )
@@ -67,5 +68,6 @@ print(buffer.getvalue())
 ## For more
 
 - To start jumping in, check out [the quickstart](usage/index.qmd)
+- To learn how to set up and use the gated models, check out [the gated model documentation](usage/gated_models.qmd)
 
 You can also directly read up on [the function and class references](reference/index.qmd).

@@ -36,14 +36,17 @@ print("\n".join(text_list))
 Each segment also has word-level data available in the `words` field including `start` and `end` times for each word.
 
 ### Diarization
+::: {.callout-tip}
+# Gated model access
+Diarization requires [a HuggingFace Access Token](https://huggingface.co/settings/tokens) and that you agree to the terms of some gated models. See the documentation page on [setting and using access tokens](gated_models.qmd)
+:::
 Some audio files have more than one speaker, and a raw transcript may not be useful if we don't know who said what. The process of assigning speech to a speaker in an audio file is *diarization*. `fave-asr` uses machine learning models which are *gated*, meaning that the creators might require you to agree to particular terms before using it. You can learn more and agree to the terms at the [page for the diarization model](https://huggingface.co/pyannote/speaker-diarization-3.1).
 
-Diarization works best if you have [a HuggingFace Access Token](https://huggingface.co/settings/tokens) which makes it easy to download the most up-to-date models. You can also leave it blank, like in the example here, but the results are not guaranteed.
-
 ```{python}
+import os
 diarization = fave_asr.diarize(
     audio_file = 'resources/SnoopDogg_85SouthMedia.wav',
-    hf_token=''
+    hf_token=os.environ["HF_TOKEN"]
     )
 print(diarization)
 ```

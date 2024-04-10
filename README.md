@@ -68,7 +68,7 @@ buffer.close = lambda: None
 tg.write(buffer)
 print(buffer.getvalue())
 ```
-## HuggingFace models used
+## Using gated models
 Artifical Intelegence models are powerful and in the wrong hands can be dangerous. The models used by fave-asr are cost-free, but you need to accept additional terms of use.
 
 To use these models:
@@ -80,10 +80,23 @@ To use these models:
 Keep track of your token and keep it safe (e.g. don't accidentally upload it to GitHub). 
 We suggest creating an environment variable for your token so that you don't need to paste it into your files.
 
-### Creating an environment variable for your token
-#### Linux and Mac
-1. Open `~/.bashrc` in a text editor
+## Creating an environment variable for your token
+Storing your tokens as environment variables is a good way to avoid accidentally leaking them. Instead of typing the token into your code and deleting it before you commit, you can use `os.environ["HF_TOKEN"]` to access it from Python instead. This also makes your code more readable since it's obvious what `HF_TOKEN` is while a string of numbers and letters isn't clear.
+
+### Linux and Mac
+On Linux and Mac you can store your token in `.bashrc`
+
+1. Open `$HOME/.bashrc` in a text editor
 2. At the end of that file, add the following `HF_TOKEN='<your token>' ; export HF_TOKEN` replacing `<your token>` with [your HuggingFace token](https://hf.co/settings/tokens)
+3. Add the changes to your current session using `source $HOME/.bashrc`
+
+### Windows
+On Windows, use the `setx` command to create an environment variable.
+```
+setx HF_TOKEN <your token>
+```
+
+You need to restart the command line afterwards to make the environment variable available for use. If you try to use the variable in the same window you set the variable, you will run into problems.
 
 ### Other software required
 * `ffmpeg`
