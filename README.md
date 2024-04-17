@@ -19,7 +19,7 @@ The FAVE-asr package provides a system for the automated transcription of sociol
 - You want to make an audio corpus into a text corpus.
 - You want to know the number of speakers in an audio file.
 
-For examples on how to use the pacakge, see the [Usage](usage/) pages.
+For examples on how to use the pacakge, see the [Usage](https://forced-alignment-and-vowel-extraction.github.io/fave-asr/usage/) pages.
 
 ## Installation
 To install fave-asr using pip, run the following command in your terminal:
