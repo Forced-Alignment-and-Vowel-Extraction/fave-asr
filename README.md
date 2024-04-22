@@ -36,6 +36,7 @@ pip install fave-asr
 There are several services which automate the process of transcribing audio, including
 
 - [DARLA CAVE](http://darla.dartmouth.edu/cave)
+- [CLOx](https://clox.ling.washington.edu/#/)
 - [Otter AI](https://otter.ai/)
 
 Unlike other services, `fave-asr` does not require uploading your data to other servers and instead focuses on processing audio on your own computer. Audio data can contain highly confidential information, and uploading this data to other services may not comply with ethical or legal data protection obligations. The goal of `fave-asr` is to serve those use cases where data protection makes local transcription necessary while making the process as seamless as cloud-based transcription services. 
@@ -92,3 +93,6 @@ You need to restart the command line afterwards to make the environment variable
 
 ## Authors
 Luís Roque contributed substantially to the main speaker diarization pipeline. Initial modifications to that code were made by Christian Brickhouse for stability and use as part of the fave-asr library. For licensing of the test audio, see the README in that directory.
+
+### Recommended citation
+Brickhouse, Christian (2024). FAVE-ASR: Offline transcription of interview data (Version 0.1.0) [computer software]. https://forced-alignment-and-vowel-extraction.github.io/fave-asr/

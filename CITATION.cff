@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Brickhouse"
+  given-names: "Christian"
+  orcid: "https://orcid.org/0000-0002-2748-8056"
+title: "FAVE-ASR: Offline transcription of interview data"
+version: 0.1.0
+date-released: 2024-04-09
+url: "https://github.com/Forced-Alignment-and-Vowel-Extraction/fave-asr"

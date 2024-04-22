@@ -31,6 +31,7 @@ pip install fave-asr
 There are several services which automate the process of transcribing audio, including
 
 - [DARLA CAVE](http://darla.dartmouth.edu/cave)
+- [CLOx](https://clox.ling.washington.edu/#/)
 - [Otter AI](https://otter.ai/)
 
 Unlike other services, `fave-asr` does not require uploading your data to other servers and instead focuses on processing audio on your own computer. Audio data can contain highly confidential information, and uploading this data to other services may not comply with ethical or legal data protection obligations. The goal of `fave-asr` is to serve those use cases where data protection makes local transcription necessary while making the process as seamless as cloud-based transcription services. 
@@ -71,3 +72,9 @@ print(buffer.getvalue())
 - To learn how to set up and use the gated models, check out [the gated model documentation](usage/gated_models.qmd)
 
 You can also directly read up on [the function and class references](reference/index.qmd).
+
+## Authors
+The speaker diarization pipeline is based on [an article and code by Luís Roque](https://github.com/luisroque/large_laguage_models/blob/062d3c1d77da3bafa8f52a951eac099480ce3b15/speech2text_whisperai_pyannotate.py) released under [the CC-By-4.0 license](https://creativecommons.org/licenses/by/4.0/). Christian Brickhouse modified that work to use the whisper-timestamped model and for use as a library. For licensing of the test audio, see the README in that directory.
+
+### Recommended citation
+Brickhouse, Christian (2024). FAVE-ASR: Offline transcription of interview data (Version 0.1.0) [computer software]. https://forced-alignment-and-vowel-extraction.github.io/fave-asr/
